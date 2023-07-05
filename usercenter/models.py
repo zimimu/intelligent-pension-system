@@ -10,4 +10,3 @@ class user(models.Model):
     sex = models.CharField(max_length=10)
     phone = models.CharField(max_length=50)
     description = models.CharField(max_length=200)
-
