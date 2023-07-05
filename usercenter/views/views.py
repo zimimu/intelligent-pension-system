@@ -12,29 +12,28 @@ def test01(request):
 
 def userLogin(request):
     print("登陆请求被触发")
-    return JsonResponse('testLogin',safe=False)
     # 得到的是一个二进制数据
-#     json_str = request.body
-#     # 对二进制数据进行解码,解码得到json数据
-#     json_str = json_str.decode()
-#     # 将json数据转化成字典形式
-#     json_data = json.loads(json_str)
-#     print(json_data)
-#
-#     username = json_data["username"]
-#     password = json_data["password"]
-#     if username and password:
-#         try:
-#             user_list = models.user.objects.get(username=username)
-#         except:
-#             return JsonResponse({'msg': '未进行注册', "code": '204'}, safe=False)
-#         if user_list.password == password:
-#             return JsonResponse({'msg': '密码正确', "code": '200'}, safe=False)
-#         else:
-#             return JsonResponse({'msg': '密码错误', "code": '204'}, safe=False)
-#     else:
-#         return JsonResponse({'msg': '未输入账号或密码', "code": '204'}, safe=False)
-#
+    json_str = request.body
+    # 对二进制数据进行解码,解码得到json数据
+    json_str = json_str.decode()
+    # 将json数据转化成字典形式
+    json_data = json.loads(json_str)
+    print(json_data)
+    username = json_data["username"]
+    password = json_data["password"]
+
+    if username and password:
+        try:
+            user_list = models.user.objects.get(username=username)
+        except:
+            return JsonResponse({'msg': '未进行注册', "code": '204'}, safe=False)
+        if user_list.password == password:
+            return JsonResponse({'msg': '密码正确', "code": '200'}, safe=False)
+        else:
+            return JsonResponse({'msg': '密码错误', "code": '204'}, safe=False)
+    else:
+        return JsonResponse({'msg': '未输入账号或密码', "code": '204'}, safe=False)
+
 def changePw(request):
     # 得到的是一个二进制数据
     json_str = request.body
