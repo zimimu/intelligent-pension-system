@@ -79,10 +79,21 @@ WSGI_APPLICATION = 'intelligentPessionSystem.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# 配置数据库
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',  # 修改为mysql
+        'NAME': "pension",  # 数据库名字
+        "USER": "root",  # 用户名
+        "PASSWORD": "0626",  # 密码
+        "HOST": "127.0.0.1",  # ip
+        "PORT": "3306"  # 端口
     }
 }
 
