@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-"""
+'''
 使用dlib实现人脸检测
-"""
+'''
 import face_recognition
 import cv2
 import pickle
@@ -21,10 +21,10 @@ class FaceUtil:
     # load embeddings
     def load_embeddings(self, encoding_file_path):
         # load the known faces and embeddings
-        print("[INFO] loading face encodings...")
+        print("[INFO] loading faceInfo encodings...")
         self.data = pickle.loads(open(encoding_file_path, "rb").read())
 
-    # face detection
+    # faceInfo detection
     def get_face_location(self, image):
         face_location_list = []
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -37,25 +37,24 @@ class FaceUtil:
 
         return face_location_list
 
-    # face recognition
-    # 用于人脸识别，得到人脸的位置和对应的名字
+    # faceInfo recognition
     def get_face_location_and_name(self, image):
         # convert the input frame from BGR to RGB
         rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
         # detect the (x, y)-coordinates of the bounding boxes
-        # corresponding to each face in the input frame, then
-        # compute the facial embeddings for each face
+        # corresponding to each faceInfo in the input frame, then
+        # compute the facial embeddings for each faceInfo
         boxes = face_recognition.face_locations(
             rgb, model=self.detection_method)
         encodings = face_recognition.face_encodings(rgb, boxes)
 
-        # initialize the list of names for each face detected
+        # initialize the list of names for each faceInfo detected
         names = []
 
         # loop over the facial embeddings
         for encoding in encodings:
-            # attempt to match each face in the input image to
+            # attempt to match each faceInfo in the input image to
             # our known encodings
             matches = face_recognition.compare_faces(
                 self.data["encodings"], encoding,
@@ -66,17 +65,17 @@ class FaceUtil:
             if True in matches:
                 # find the indexes of all matched faces then
                 # initialize a dictionary to count the total number
-                #  of times each face was matched
+                #  of times each faceInfo was matched
                 matched_idxs = [i for (i, b) in enumerate(matches) if b]
                 counts = {}
 
                 # loop over the matched indexes and maintain a count
-                # for each recognized face face
+                # for each recognized faceInfo
                 for i in matched_idxs:
                     name = self.data["names"][i]
                     counts[name] = counts.get(name, 0) + 1
 
-                # determine the recognized face with the largest
+                # determine the recognized faceInfo with the largest
                 # number of votes (note: in the event of an unlikely
                 # tie Python will select first entry in the
                 # dictionary)
@@ -91,7 +90,6 @@ class FaceUtil:
 
         return face_location_list, names
 
-    # 用于训练人脸识别模型，并把模型保存到硬盘中
     def save_embeddings(self, image_paths, output_encoding_file_path):
         warning = ''
 
@@ -102,8 +100,7 @@ class FaceUtil:
         # loop over the image paths
         for (i, image_path) in enumerate(image_paths):
             # extract the person name from the image path
-            print("[INFO] processing image {}/{}"
-                  .format(i + 1, len(image_paths)))
+            print("[INFO] processing image {}/{}".format(i + 1, len(image_paths)))
             name = image_path.split(os.path.sep)[-2]  # person name
 
             # load the input image and convert it from
@@ -112,18 +109,16 @@ class FaceUtil:
             rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
             # detect the (x, y)-coordinates of the bounding boxes
-            # corresponding to each face in the input image
-            boxes = face_recognition.face_locations(
-                rgb, model=self.detection_method)
+            # corresponding to each faceInfo in the input image
+            boxes = face_recognition.face_locations(rgb, model=self.detection_method)
 
-            # compute the facial embedding for the face
+            # compute the facial embedding for the faceInfo
             encodings = face_recognition.face_encodings(rgb, boxes)
 
             if len(encodings) != 1:
                 os.remove(image_path)
-                warning += '[WARNING] detected %d faces in %s.'
-                warning += ' This file is deleted.\n' % (
-                    len(encodings), image_path)
+                warning += '[WARNING] detected %d faces in %s.'% (len(encodings), image_path)
+                warning += ' This file is deleted.\n'
                 continue
 
             # loop over the encodings

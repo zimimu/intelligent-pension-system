@@ -78,8 +78,8 @@ class TrainingMonitor(BaseLogger):
 
         # accuracy curve
         plt.figure()
-        plt.plot(N, self.H["acc"], label="train_acc")
-        plt.plot(N, self.H["val_acc"], label="val_acc")
+        plt.plot(N, self.H["accuracy"], label="train_acc")
+        plt.plot(N, self.H["val_accuracy"], label="val_acc")
         plt.title("Training Accuracy [Epoch {}]"
                   .format(len(self.H["loss"])))
         plt.xlabel("Epoch #")
