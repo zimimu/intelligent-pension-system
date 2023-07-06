@@ -11,16 +11,16 @@
 # 摄像头实时画面
 #
 # '''
-import argparse
+# import argparse
 # # from flask import Flask, render_template, Response, request
 # # from oldcare.camera import VideoCamera
 # from caresystem.views import VideoCamera
 #
-# 传入参数
-ap = argparse.ArgumentParser()
-ap.add_argument("-f", "--location", required=False,
-                default = 'room', help="")
-args = vars(ap.parse_args())
+# # 传入参数
+# ap = argparse.ArgumentParser()
+# ap.add_argument("-f", "--location", required=False,
+#                 default = 'room', help="")
+# args = vars(ap.parse_args())
 # location = args['location']
 #
 # if location not in ['room', 'yard', 'corridor', 'desk']:
@@ -28,14 +28,15 @@ args = vars(ap.parse_args())
 #
 # # API
 #
-video_camera = None
-global_frame = None
-
-# @app.route('/')
+# video_camera = None
+# global_frame = None
+#
+# # @app.route('/')
 # def index():
+#
 #     return render_template(location + '_camera.html')
-
-# @app.route('/record_status', methods=['POST'])
+#
+# # @app.route('/record_status', methods=['POST'])
 # def record_status():
 #     global video_camera
 #     if video_camera == None:
@@ -50,8 +51,8 @@ global_frame = None
 #     else:
 #         video_camera.stop_record()
 #         return 'stop record'
-
-
+#
+#
 # def video_stream():
 #     global video_camera
 #     global global_frame
@@ -72,11 +73,11 @@ global_frame = None
 #                    b'Content-Type: image/jpeg\r\n\r\n'
 #                    + global_frame + b'\r\n\r\n')
 #
-
+#
 # @app.route('/video_viewer')
 # def video_viewer():
 #     return Response(video_stream(),mimetype='multipart/x-mixed-replace; boundary=frame')
-
+#
 # if __name__ == '__main__':
 #     app.run(host='0.0.0.0', threaded=True, port=5001)
-
+#
