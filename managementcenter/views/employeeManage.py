@@ -82,10 +82,9 @@ def checkEmployeeById(request):
         except:
             return {'msg': '不存在本信息，请检查id是否输入错误', "code": '204'}
         res = model_to_dict(employee_list)
-        return {'msg': '获取成功', "code": '200', 'oldList': res}
+        return {'msg': '获取成功', "code": '200', 'employeeList': res}
     else:
         return {'msg': '请输入id', "code": '205'}
-
 
 def getEmployeeList(request):
     try:
@@ -95,4 +94,4 @@ def getEmployeeList(request):
     res = []
     for i in employee_list:
         res.append(model_to_dict(i))
-    return {'msg': '获取成功', "code": '200', 'oldList': res}
+    return {'msg': '获取成功', "code": '200', 'employeeList': res}
