@@ -11,16 +11,16 @@
 # 摄像头实时画面
 #
 # '''
-# import argparse
+import argparse
 # # from flask import Flask, render_template, Response, request
 # # from oldcare.camera import VideoCamera
 # from caresystem.views import VideoCamera
 #
-# # 传入参数
-# ap = argparse.ArgumentParser()
-# ap.add_argument("-f", "--location", required=False,
-#                 default = 'room', help="")
-# args = vars(ap.parse_args())
+# 传入参数
+ap = argparse.ArgumentParser()
+ap.add_argument("-f", "--location", required=False,
+                default = 'room', help="")
+args = vars(ap.parse_args())
 # location = args['location']
 #
 # if location not in ['room', 'yard', 'corridor', 'desk']:
