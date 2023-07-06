@@ -7,8 +7,6 @@ from django.shortcuts import render,HttpResponse
 from django.http import JsonResponse
 from usercenter import models
 
-def test01(request):
-    return JsonResponse('test01', safe=False)
 
 def userLogin(request):
     # 得到的是一个二进制数据
@@ -25,13 +23,13 @@ def userLogin(request):
         try:
             user_list = models.user.objects.get(username=username)
         except:
-            return JsonResponse({'msg': '未进行注册', "code": '204'}, safe=False)
+            return JsonResponse({'msg': '未进行注册', "code": '204', "status_code": "1"}, safe=False)
         if user_list.password == password:
-            return JsonResponse({'msg': '密码正确', "code": '200'}, safe=False)
+            return JsonResponse({'msg': '密码正确', "code": '200', "status_code": "2"}, safe=False)
         else:
-            return JsonResponse({'msg': '密码错误', "code": '204'}, safe=False)
+            return JsonResponse({'msg': '密码错误', "code": '204', "status_code": "3"}, safe=False)
     else:
-        return JsonResponse({'msg': '未输入账号或密码', "code": '204'}, safe=False)
+        return JsonResponse({'msg': '未输入账号或密码', "code": '204', "status_code": "4"}, safe=False)
 
 def changePw(request):
     # 得到的是一个二进制数据
