@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="011823b4-62e6-4718-8969-cf22780d9ef7" name="Changes" comment="用户中心模块，获取用户信息完成">
-      <change afterPath="$PROJECT_DIR$/caresystem/views/camerautil.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caresystem/views/startingcameraservice.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caresystem/views/startingrecording.py" afterDir="false" />
+    <list default="true" id="011823b4-62e6-4718-8969-cf22780d9ef7" name="Changes" comment="视频流模块拼接">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caresystem/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caresystem/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caresystem/views/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/startingcameraservice.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/startingcameraservice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/startingrecording.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/startingrecording.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caresystem/views/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,17 +27,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "F:/SummerVacation2023/intelligent-pension-system/caresystem/views",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/SummerVacation2023/intelligent-pension-system/caresystem/views&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\SummerVacation2023\intelligent-pension-system\caresystem\views" />
@@ -98,7 +94,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1688607029077</updated>
-      <workItem from="1688607033278" duration="11570000" />
+      <workItem from="1688607033278" duration="13947000" />
     </task>
     <task id="LOCAL-00003" summary="修改部分状态码">
       <created>1688607942646</created>
@@ -114,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688615616685</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="视频流模块拼接">
+      <created>1688627614555</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1688627614555</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,7 +139,8 @@
     <MESSAGE value="部分bug修改" />
     <MESSAGE value="修改部分状态码" />
     <MESSAGE value="用户中心模块，获取用户信息完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="用户中心模块，获取用户信息完成" />
+    <MESSAGE value="视频流模块拼接" />
+    <option name="LAST_COMMIT_MESSAGE" value="视频流模块拼接" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -19,7 +19,8 @@ def orm(request):
 
 # 获取视频流
 def camera(request):
-    return JsonResponse(video_stream(),mimetype='multipart/x-mixed-replace; boundary=frame')
+    print("测试camera接口")
+    return JsonResponse(video_stream(),mimetype='multipart/x-mixed-replace; boundary=frame',safe=False)
 
 # 视频流方法
 def video_stream():
