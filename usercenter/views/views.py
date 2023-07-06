@@ -26,13 +26,13 @@ def userLogin(request):
         try:
             user_list = models.user.objects.get(username=username)
         except:
-            return JsonResponse({'msg': '未进行注册', "code": '204'}, safe=False)
+            return JsonResponse({'msg': '未进行注册', "code": '401'}, safe=False)
         if user_list.password == password:
             return JsonResponse({'msg': '密码正确', "code": '200'}, safe=False)
         else:
-            return JsonResponse({'msg': '密码错误', "code": '204'}, safe=False)
+            return JsonResponse({'msg': '密码错误', "code": '401'}, safe=False)
     else:
-        return JsonResponse({'msg': '未输入账号或密码', "code": '204'}, safe=False)
+        return JsonResponse({'msg': '未输入账号或密码', "code": '401'}, safe=False)
 
 def changePw(request):
     # 得到的是一个二进制数据
@@ -50,7 +50,6 @@ def changePw(request):
     except:
         return JsonResponse({'msg': '服务器错误，请重试', "code": '500'}, safe=False)
     return JsonResponse({'msg': '修改成功', "code": '200'}, safe=False)
-
 
 def changeUserInfo(request):
     # 得到的是一个二进制数据
@@ -70,7 +69,6 @@ def changeUserInfo(request):
     except:
         return JsonResponse({'msg': '服务器错误，请重试', "code": '500'}, safe=False)
     return JsonResponse({'msg': '修改成功', "code": '200'}, safe=False)
-
 
 def addNewUser(request):
     # 得到的是一个二进制数据
