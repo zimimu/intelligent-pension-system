@@ -27,14 +27,20 @@ def addVolunteerInfo(request):
     now_time = globeFunction.get_now_time()
     print(birthday)
     try:
-        models.volunteer_info.objects.create(volunteername=json_data["volunteername"],sex=json_data["sex"],
+        volunteer = models.volunteer_info(volunteername=json_data["volunteername"],sex=json_data["sex"],
                                             phone=json_data["phone"], idcard=json_data["idcard"], birthday=birthday,
                                             checkindate=now_time, description=json_data["description"], created=now_time,
                                             createby=json_data["username"])
+        volunteer.save()
     except:
         return {'msg': '服务器错误，请重试', "code": '500'}
 
-    return {'msg': '添加成功', "code": '200'}
+    try:
+        face = models.face_recognition_info(identity="volunteer",identity_id=volunteer.ID,name=json_data["volunteername"])
+        face.save()
+    except:
+        return {'msg': '服务器错误，请重试', "code": '500'}
+    return {'msg': '添加成功', "code": '200', "id": face.ID}
 
 def updateVolunteerInfo(request):
     # 得到的是一个二进制数据

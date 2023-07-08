@@ -3,12 +3,15 @@ from django.shortcuts import render
 # Create your views here.
 from django.shortcuts import render, HttpResponse
 from django.http import JsonResponse
+from caresystem.views import mobile,dataManage
 from caresystem import models
 from caresystem.views import VideoCamera
 
 
-def test01(request):
-    return JsonResponse('test02', safe=False)
+# 获取事件列表
+def getEventInfo(request):
+    result = dataManage.getEventInfo(request)
+    return JsonResponse(result, safe=False)
 
 def orm(request):
     # 测试ORM操作表中的数据

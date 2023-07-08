@@ -79,3 +79,8 @@ def checkVolunteerById(request):
 def getVolunteerList(request):
     result = volunteerManage.getVolunteerList(request)
     return JsonResponse(result, safe=False)
+
+# 获取老人监护人电话号
+def getGuartionPhone(request):
+    result = oldManage.get_guardian_phone(request)
+    return JsonResponse(result, safe=False)
