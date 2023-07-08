@@ -17,5 +17,6 @@ urlpatterns = [
     path('updateVolunteer/', manage_views.updateVolunteerInfo),
     path('checkoutVolunteer/', manage_views.checkoutVolunteer),
     path('checkVolunteerById/', manage_views.checkVolunteerById),
-    path('getVolunteerList/', manage_views.getVolunteerList)
+    path('getVolunteerList/', manage_views.getVolunteerList),
+    path('getGuartionPhone/', manage_views.getGuartionPhone)
 ]

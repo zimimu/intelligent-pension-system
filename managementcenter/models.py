@@ -58,3 +58,12 @@ class volunteer_info(models.Model):
     createby = models.CharField(max_length=50)
     updated = models.DateTimeField(null=True)
     updateby = models.CharField(max_length=50, null=True)
+
+
+class face_recognition_info(models.Model):
+    ID = models.AutoField(primary_key=True)
+    identity = models.CharField(max_length=50)
+    identity_id = models.IntegerField()
+    name = models.CharField(max_length=50)
+
+

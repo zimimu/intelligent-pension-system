@@ -43,17 +43,25 @@ def addOldInfo(request):
     now_time = get_now_time()
 
     try:
-        models.oldperson_info.objects.create(oldname=json_data["oldname"],sex=json_data["sex"],phone=json_data["phone"],
+        old = models.oldperson_info(oldname=json_data["oldname"],sex=json_data["sex"],phone=json_data["phone"],
                                    idcard=idcard,birthday=birthday,checkindate=now_time,roomnum=json_data["roomnum"],firstguardianname=json_data["firstguardianname"],
                                    firstguardianrela=json_data["firstguardianrela"],firstguardianphone=json_data["firstguardianphone"],
                                    firstguardianwechat=json_data["firstguardianwechat"],secondguardianname=json_data["secondguardianname"],
                                    secondguardianrela=json_data["secondguardianrela"],secondguardianphone=json_data["secondguardianphone"],
                                    secondguardianwechat=json_data["secondguardianwechat"],healthstate=["healthstate"],description=json_data["description"],
                                    created=now_time,createby=json_data["username"])
+        old.save()
     except:
         return {'msg': '服务器错误，请重试', "code": '500'}
 
-    return {'msg': '添加成功', "code": '200'}
+    try:
+        face = models.face_recognition_info(identity="old_people",identity_id=old.ID,name=json_data["oldname"])
+        face.save()
+    except:
+        return {'msg': '服务器错误，请重试', "code": '500'}
+
+
+    return {'msg': '添加成功', "code": '200', "id":face.ID}
 
 def updateOldInfo(request):
     # 得到的是一个二进制数据
@@ -120,3 +128,14 @@ def getOldList(request):
     for i in old_list:
         res.append(model_to_dict(i))
     return {'msg': '获取成功', "code": '200', 'oldList': res}
+
+def get_guardian_phone(request):
+    id = request.GET["id"]
+    try:
+        old_list = models.oldperson_info.objects.get(ID=id)
+    except:
+        return {'msg': '不存在本信息，请检查id是否输入错误', "code": '204'}
+    res = model_to_dict(old_list)
+    phone = res.get("firstguardianphone")
+    return {'msg': '获取成功', "code": '200', 'phone': phone}
+
