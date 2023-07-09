@@ -18,5 +18,6 @@ urlpatterns = [
     path('checkoutVolunteer/', manage_views.checkoutVolunteer),
     path('checkVolunteerById/', manage_views.checkVolunteerById),
     path('getVolunteerList/', manage_views.getVolunteerList),
-    path('getGuartionPhone/', manage_views.getGuartionPhone)
+    path('getGuartionPhone/', manage_views.getGuartionPhone),
+    path('getFaceCollectionStream/', manage_views.getFaceCollectionStream)
 ]
