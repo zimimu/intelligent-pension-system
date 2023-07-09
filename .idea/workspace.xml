@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50dc8842-915a-42a8-acde-b328cca1eb7a" name="Changes" comment="整合跌倒检测，入侵检测，交互检测，情感分析">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="50dc8842-915a-42a8-acde-b328cca1eb7a" name="Changes" comment="整合跌倒检测，入侵检测，交互检测，情感分析" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,7 +109,7 @@
       <option name="presentableId" value="Default" />
       <updated>1688917927655</updated>
       <workItem from="1688917928823" duration="7190000" />
-      <workItem from="1688925634110" duration="660000" />
+      <workItem from="1688925634110" duration="827000" />
     </task>
     <task id="LOCAL-00001" summary="整合跌倒检测，入侵检测，交互检测，情感分析">
       <created>1688925723348</created>
@@ -120,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688925723348</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="整合跌倒检测，入侵检测，交互检测，情感分析">
+      <created>1688926459900</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1688926459900</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
