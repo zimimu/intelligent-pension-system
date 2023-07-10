@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50dc8842-915a-42a8-acde-b328cca1eb7a" name="Changes" comment="整合跌倒检测，入侵检测，交互检测，情感分析">
+    <list default="true" id="50dc8842-915a-42a8-acde-b328cca1eb7a" name="Changes" comment="删除没用文件">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/falldetection/camera/camerautil.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/falldetection/camera/camerautil.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/falldetection/falldetectioninterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/falldetection/falldetectioninterface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/falldetection/startingcameraservice.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/falldetection/startingcameraservice.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,20 +48,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/xxq/demo04&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/xxq/demo07/FaceRecognition/FaceRecognition",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\xxq\demo09\caresystem\views\volunteeract" />
@@ -75,7 +78,29 @@
       <recent name="E:\xxq\demo09\caresystem\views\facialexpression" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Django Server.Unnamed">
+    <configuration name="startingcameraservice" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="intelligentPessionSystem" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/caresystem/views/falldetection" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/caresystem/views/falldetection/startingcameraservice.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unnamed" type="Python.DjangoServer" factoryName="Django server" nameIsGenerated="true">
       <module name="intelligentPessionSystem" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -101,6 +126,11 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.startingcameraservice" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -114,6 +144,7 @@
       <workItem from="1688925634110" duration="827000" />
       <workItem from="1688926498532" duration="299000" />
       <workItem from="1688951821795" duration="26000" />
+      <workItem from="1688951959307" duration="2679000" />
     </task>
     <task id="LOCAL-00001" summary="整合跌倒检测，入侵检测，交互检测，情感分析">
       <created>1688925723348</created>
@@ -136,7 +167,21 @@
       <option name="project" value="LOCAL" />
       <updated>1688926639106</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="修了个小错">
+      <created>1688952189226</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1688952189226</updated>
+    </task>
+    <task id="LOCAL-00005" summary="删除没用文件">
+      <created>1688952422276</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1688952422276</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,7 +215,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="整合跌倒检测，入侵检测，交互检测，情感分析" />
-    <option name="LAST_COMMIT_MESSAGE" value="整合跌倒检测，入侵检测，交互检测，情感分析" />
+    <MESSAGE value="修了个小错" />
+    <MESSAGE value="删除没用文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除没用文件" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/demo04$startingcameraservice.coverage" NAME="startingcameraservice Coverage Results" MODIFIED="1688954280524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/caresystem/views/falldetection" />
   </component>
 </project>
