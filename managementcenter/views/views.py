@@ -1,9 +1,10 @@
 from django.shortcuts import render
 
 # Create your views here.
-from django.http import JsonResponse
-from managementcenter.views import oldManage,employeeManage,volunteerManage
+from django.http import JsonResponse, StreamingHttpResponse
 
+from managementcenter.views import oldManage,employeeManage,volunteerManage
+from managementcenter.views.faceCollection import startingcameraservice
 
 # 增加老人信息
 def addOldInfo(request):
@@ -84,3 +85,6 @@ def getVolunteerList(request):
 def getGuartionPhone(request):
     result = oldManage.get_guardian_phone(request)
     return JsonResponse(result, safe=False)
+
+def getFaceCollectionStream(request):
+    return StreamingHttpResponse(startingcameraservice.video_stream(), content_type='multipart/x-mixed-replace; boundary=frame')

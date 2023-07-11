@@ -27,6 +27,7 @@ class oldperson_info(models.Model):
     updated = models.DateTimeField(null=True)
     updateby = models.CharField(max_length=50, null=True)
 
+
 class employee_info(models.Model):
     ID = models.AutoField(primary_key=True)
     employeename = models.CharField(max_length=50, null=True)
@@ -41,6 +42,7 @@ class employee_info(models.Model):
     createby = models.CharField(max_length=50, null=True)
     updated = models.DateTimeField(null=True)
     updateby = models.CharField(max_length=50, null=True)
+
 
 class volunteer_info(models.Model):
     ID = models.AutoField(primary_key=True)

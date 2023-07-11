@@ -9,6 +9,7 @@ import pytz
 from managementcenter.views import globeFunction
 from managementcenter import models
 
+
 def addVolunteerInfo(request):
     # 得到的是一个二进制数据
     json_str = request.body
@@ -87,7 +88,7 @@ def checkVolunteerById(request):
         except:
             return {'msg': '不存在本信息，请检查id是否输入错误', "code": '204'}
         res = model_to_dict(volunteer_list)
-        return {'msg': '获取成功', "code": '200', 'volunteerList': res}
+        return {'msg': '获取成功', "code": '200', 'oldList': res}
     else:
         return {'msg': '请输入id', "code": '205'}
 
@@ -100,4 +101,4 @@ def getVolunteerList(request):
     res = []
     for i in volunteer_list:
         res.append(model_to_dict(i))
-    return {'msg': '获取成功', "code": '200', 'volunteerList': res}
+    return {'msg': '获取成功', "code": '200', 'oldList': res}

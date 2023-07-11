@@ -113,7 +113,7 @@ def checkOldById(request):
             old_list = models.oldperson_info.objects.get(ID=id)
             print(old_list)
         except:
-            return {'msg': '不存在本信息，请检查id是否输入错误', "code": '401'}
+            return {'msg': '不存在本信息，请检查id是否输入错误', "code": '204'}
         res = model_to_dict(old_list)
         return {'msg': '获取成功', "code": '200', 'oldList': res}
     else:
@@ -123,7 +123,7 @@ def getOldList(request):
     try:
         old_list = models.oldperson_info.objects.all()
     except:
-        return {'msg': '不存在本信息', "code": '401'}
+        return {'msg': '不存在本信息', "code": '204'}
     res = []
     for i in old_list:
         res.append(model_to_dict(i))

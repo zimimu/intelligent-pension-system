@@ -2,47 +2,32 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.shortcuts import render, HttpResponse
-from django.http import JsonResponse
-from caresystem.views import mobile,dataManage
-from caresystem import models
-from caresystem.views import VideoCamera
+from django.http import JsonResponse, StreamingHttpResponse
 
+import caresystem
+from caresystem.views import mobile,dataManage
+from caresystem.views.facialexpression import startingcameraservice
+from caresystem.views.falldetection import startingcameraservice
+from caresystem.views.fencein import startingcameraservice
+from caresystem.views.volunteeract import startingcameraservice
+
+def test01(request):
+    result = dataManage.addEvent(2,"互动","与护工哈哈进行互动")
+    return JsonResponse('test02', safe=False)
 
 # 获取事件列表
 def getEventInfo(request):
     result = dataManage.getEventInfo(request)
     return JsonResponse(result, safe=False)
 
-def orm(request):
-    # 测试ORM操作表中的数据
-    data_list = models.test.objects.all()
-    for obj in data_list:
-        print(obj.id, obj.name, obj.password, obj.age)
-    return JsonResponse('orm', safe=False)
+def getFacialExpressionStream(request):
+    return StreamingHttpResponse(caresystem.views.facialexpression.startingcameraservice.video_stream(), content_type='multipart/x-mixed-replace; boundary=frame')
 
-# 获取视频流
-def camera(request):
-    print("测试camera接口")
-    return JsonResponse(video_stream(),mimetype='multipart/x-mixed-replace; boundary=frame',safe=False)
+def getFalldetectionStream(request):
+    return StreamingHttpResponse(caresystem.views.falldetection.startingcameraservice.video_stream(), content_type='multipart/x-mixed-replace; boundary=frame')
 
-# 视频流方法
-def video_stream():
-    global video_camera
-    global global_frame
+def getFenceinStream(request):
+    return StreamingHttpResponse(caresystem.views.fencein.startingcameraservice.video_stream(), content_type='multipart/x-mixed-replace; boundary=frame')
 
-    if video_camera is None:
-        video_camera = VideoCamera()
-
-    while True:
-        frame = video_camera.get_frame()
-
-        if frame is not None:
-            global_frame = frame
-            yield (b'--frame\r\n'
-                   b'Content-Type: image/jpeg\r\n\r\n' + frame
-                   + b'\r\n\r\n')
-        else:
-            yield (b'--frame\r\n'
-                   b'Content-Type: image/jpeg\r\n\r\n'
-                   + global_frame + b'\r\n\r\n')
-
+def getVolunteeractStream(request):
+    return StreamingHttpResponse(caresystem.views.volunteeract.startingcameraservice.video_stream(), content_type='multipart/x-mixed-replace; boundary=frame')
