@@ -6,9 +6,6 @@ import threading
 from caresystem.views.falldetection.falldetectioninterface import falldetection
 from managementcenter.views.faceCollection.collectingfaceinterface import collectingfaces
 from managementcenter.views.faceCollection.facial import FaceUtil
-i=0
-
-
 
 class VideoCamera(object):
     def __init__(self):
@@ -32,7 +29,7 @@ class VideoCamera(object):
         if ret:
             frame = cv2.flip(frame, 1)
 
-            frame,i=falldetection(ret, frame,i)
+            frame=falldetection(ret, frame)
 
             ret, jpeg = cv2.imencode('.jpg', frame)
             return jpeg.tobytes()

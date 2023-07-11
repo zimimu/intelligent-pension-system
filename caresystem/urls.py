@@ -8,5 +8,5 @@ urlpatterns = [
     path('getFacialExpressionStream/',care_views.getFacialExpressionStream),
     path('getFalldetectionStream/',care_views.getFenceinStream),
     path('getFenceinStream/', care_views.getFenceinStream),
-    path('getVolunteeractStream/', care_views.getFenceinStream)
+    path('getVolunteeractStream/', care_views.getVolunteeractStream)
 ]

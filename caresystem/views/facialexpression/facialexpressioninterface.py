@@ -190,4 +190,4 @@ def checkingstrangersandfacialexpression(grabbed, frame):
 
         # 转换回OpenCV格式
         frame = cv2.cvtColor(np.asarray(img_PIL), cv2.COLOR_RGB2BGR)
-    return frame
+        return frame

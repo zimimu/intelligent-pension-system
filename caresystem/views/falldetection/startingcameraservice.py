@@ -1,16 +1,12 @@
 # -*- coding: utf-8 -*-
 
-'''
+"""
 启动摄像头主程序
 
-用法:
-python startingcameraservice.py
-python startingcameraservice.py --location room
-
-直接执行即可启动摄像头，浏览器访问 http://192.168.1.156:5001/ 即可看到
+直接执行即可启动摄像头，浏览器访问即可看到
 摄像头实时画面
 
-'''
+"""
 import argparse
 
 from caresystem.views.falldetection.camera import VideoCamera
