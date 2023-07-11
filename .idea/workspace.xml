@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50dc8842-915a-42a8-acde-b328cca1eb7a" name="Changes" comment="删除没用文件">
+    <list default="true" id="50dc8842-915a-42a8-acde-b328cca1eb7a" name="Changes" comment="视频流模块拼接">
+      <change beforePath="$PROJECT_DIR$/.idea/intelligentPessionSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/intelligentPessionSystem.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caresystem/views/falldetection/camera/camerautil.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/falldetection/camera/camerautil.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caresystem/views/falldetection/falldetectioninterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/falldetection/falldetectioninterface.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caresystem/views/falldetection/startingcameraservice.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/falldetection/startingcameraservice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/intelligentPessionSystem/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/intelligentPessionSystem/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/managementcenter/views/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/managementcenter/views/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +38,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="origin-ll" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
@@ -127,6 +133,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.startingcameraservice" />
+        <item itemvalue="Python.startingcameraservice" />
+        <item itemvalue="Python.startingcameraservice" />
+        <item itemvalue="Python.startingcameraservice" />
         <item itemvalue="Python.startingcameraservice" />
       </list>
     </recent_temporary>
@@ -220,6 +230,7 @@
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/intelligent_pension_system$views.coverage" NAME="views Coverage Results" MODIFIED="1688460138359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/caresystem/views" />
     <SUITE FILE_PATH="coverage/demo04$startingcameraservice.coverage" NAME="startingcameraservice Coverage Results" MODIFIED="1688954280524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/caresystem/views/falldetection" />
   </component>
 </project>

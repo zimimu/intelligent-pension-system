@@ -87,4 +87,7 @@ def getGuartionPhone(request):
     return JsonResponse(result, safe=False)
 
 def getFaceCollectionStream(request):
-    return StreamingHttpResponse(startingcameraservice.video_stream(), content_type='multipart/x-mixed-replace; boundary=frame')
+    id = request.GET["id"]
+    print("getFaceCollectionStream函数被调用，获取的id是：")
+    print(id)
+    return StreamingHttpResponse(startingcameraservice.video_stream(id), content_type='multipart/x-mixed-replace; boundary=frame')
