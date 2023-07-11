@@ -102,4 +102,4 @@ def getEmployeeList(request):
     res = []
     for i in employee_list:
         res.append(model_to_dict(i))
-    return {'msg': '获取成功', "code": '200', 'employeeList': res}
+    return {'msg': '获取成功', 'code': '200', 'employeeList': res}

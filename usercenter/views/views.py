@@ -92,4 +92,26 @@ def addNewUser(request):
         return JsonResponse({'msg': '服务器错误，请重试', "code": '500'}, safe=False)
     return JsonResponse({'msg': '添加成功', "code": '200'}, safe=False)
 
+# 获取个人中心信息
+def getuser(request):
+    username = request.GET["username"]
+    print("getuser函数调用")
+    print(username)
+
+    if username:
+        try:
+            user = models.user.objects.get(username=username)
+            print(user)
+        except:
+            return JsonResponse({'msg': '不存在本信息', "code": '401'},safe=False)
+
+        return JsonResponse({'msg': '获取成功', "code": '200', 'username': user.username,
+                'password': user.password, 'realname': user.realname,
+                'email': user.email, 'sex': user.sex, 'phone': user.phone,
+                'description': user.description},safe=False)
+    else:
+        return JsonResponse({'msg': '请输入id', "code": '205'},safe=False)
+
+
+
 
