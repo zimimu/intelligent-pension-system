@@ -22,8 +22,8 @@ def fire_detection(frame):
     fall_limit_time = 1  # if >= 1 seconds, then he/she falls.
 
     # 全局变量
-    model_path = '../models/fire_detection.hdf5'
-    output_fall_path = '../supervision/firedata'
+    model_path = 'caresystem/views/models/fire_detection.hdf5'
+    output_fall_path = 'caresystem/views/supervision/firedata'
     # your python path
     python_path = '/home/reed/anaconda3/envs/tensorflow/bin/python'
 
