@@ -6,7 +6,7 @@ urlpatterns = [
     path('test/', care_views.test01),
     path('getEventList/', care_views.getEventInfo),
     path('getFacialExpressionStream/',care_views.getFacialExpressionStream),
-    path('getFalldetectionStream/',care_views.getFenceinStream),
+    path('getFalldetectionStream/',care_views.getFalldetectionStream),
     path('getFenceinStream/', care_views.getFenceinStream),
     path('getVolunteeractStream/', care_views.getVolunteeractStream),
     path('getFiredetectionStream/', care_views.getFiredetectionStream),

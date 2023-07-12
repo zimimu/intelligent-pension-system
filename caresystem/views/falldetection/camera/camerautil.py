@@ -4,8 +4,6 @@ import cv2
 import threading
 
 from caresystem.views.falldetection.falldetectioninterface import falldetection
-from managementcenter.views.faceCollection.collectingfaceinterface import collectingfaces
-from managementcenter.views.faceCollection.facial import FaceUtil
 
 class VideoCamera(object):
     def __init__(self):
