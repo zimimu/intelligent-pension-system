@@ -24,7 +24,9 @@ class VideoCamera(object):
     def __del__(self):
         self.cap.release()
 
-    def get_frame(self):
+    def get_frame(self,id):
+        print("get_frame函数被调用，获取的id是：")
+        print(id)
         global i
         ret, frame = self.cap.read()
 
@@ -34,7 +36,7 @@ class VideoCamera(object):
             #frame,i=falldetection(ret, frame,i)
             #frame=volunteeractivity(ret,frame)
             #frame=checkingfence(frame)
-            frame,i=collectingfaces(frame,108,i)
+            frame,i=collectingfaces(frame,id,i)
             ret, jpeg = cv2.imencode('.jpg', frame)
             return jpeg.tobytes()
 

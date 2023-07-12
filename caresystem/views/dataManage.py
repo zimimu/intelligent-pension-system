@@ -5,6 +5,8 @@ from django.core import serializers
 from django.forms import model_to_dict
 from django.utils import timezone
 import pytz
+
+import managementcenter.models
 from managementcenter.views import globeFunction
 from caresystem import models
 
@@ -34,8 +36,10 @@ def getEventInfo(request):
     try:
         event_list = models.event_info.objects.all()
     except:
-        return {'msg': '不存在本信息', "code": '204'}
+        return {'msg': '不存在本信息', "code": '404'}
     res = []
     for i in event_list:
+        # old = managementcenter.models.oldperson_info.get(ID=event_list[i].oldperson_id)
+        # old_name = old.oldname
         res.append(model_to_dict(i))
-    return {'msg': '获取成功', "code": '200', 'oldList': res}
+    return {'msg': '获取成功', "code": '200', 'eventList': res}

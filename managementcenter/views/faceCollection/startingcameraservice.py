@@ -19,7 +19,9 @@ from managementcenter.views.faceCollection.camera import VideoCamera
 video_camera = None
 global_frame = None
 
-def video_stream():
+def video_stream(id):
+    print("video_stream函数被调用，获取的id是：")
+    print(id)
     global video_camera
     global global_frame
 
@@ -27,7 +29,7 @@ def video_stream():
         video_camera = VideoCamera()
 
     while True:
-        frame = video_camera.get_frame()
+        frame = video_camera.get_frame(id)
         if frame is not None:
             global_frame = frame
             yield (b'--frame\r\n'
