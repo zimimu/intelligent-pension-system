@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" autoUpload="Always" serverName="featurize@workspace.featurize.cn:63702" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
+      <paths name="featurize@workspace.featurize.cn:63702">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/pycharm_project_535" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="root@139.9.131.82:22">
         <serverdata>
           <mappings>
@@ -10,5 +17,6 @@
         </serverdata>
       </paths>
     </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>

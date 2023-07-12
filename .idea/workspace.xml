@@ -5,10 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50dc8842-915a-42a8-acde-b328cca1eb7a" name="Changes" comment="删除没用文件">
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/intelligentPessionSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/intelligentPessionSystem.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caresystem/views/falldetection/camera/camerautil.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/falldetection/camera/camerautil.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caresystem/views/falldetection/falldetectioninterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/falldetection/falldetectioninterface.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caresystem/views/falldetection/startingcameraservice.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/falldetection/startingcameraservice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/supervision/strangers/snapshot_20230710_013052.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/supervision/strangers/snapshot_20230710_013055.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/supervision/strangers/snapshot_20230710_013057.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/supervision/strangers/snapshot_20230710_013058.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/supervision/strangers/snapshot_20230710_013059.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceInfo/images/108/blink_10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceInfo/images/108/blink_11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceInfo/images/108/blink_12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceInfo/images/108/blink_5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceInfo/images/108/blink_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceInfo/images/108/blink_7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceInfo/images/108/blink_8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceInfo/images/108/blink_9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/intelligentPessionSystem/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/intelligentPessionSystem/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/managementcenter/views/faceCollection/camera/camerautil.py" beforeDir="false" afterPath="$PROJECT_DIR$/managementcenter/views/faceCollection/camera/camerautil.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,24 +59,25 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2SLFPBQAI9OUOtBGTuM6ZGn9Vuc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/xxq/demo07/FaceRecognition/FaceRecognition",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/xxq/demo07/FaceRecognition/FaceRecognition&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\xxq\demo09\caresystem\views\volunteeract" />
@@ -109,8 +125,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="intelligentPessionSystem.settings" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\ASUS\.conda\envs\xxq\python.exe" />
-      <option name="SDK_NAME" value="Python 3.9 (xxq)" />
+      <option name="SDK_HOME" value="C:\Users\wxy\AppData\Local\Programs\Python\Python39\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -126,6 +141,10 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Django Server.Unnamed" />
+      <item itemvalue="Python.startingcameraservice" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.startingcameraservice" />
@@ -145,6 +164,10 @@
       <workItem from="1688926498532" duration="299000" />
       <workItem from="1688951821795" duration="26000" />
       <workItem from="1688951959307" duration="2679000" />
+      <workItem from="1689057560537" duration="2010000" />
+      <workItem from="1689064004477" duration="2284000" />
+      <workItem from="1689067748020" duration="140000" />
+      <workItem from="1689132612276" duration="1346000" />
     </task>
     <task id="LOCAL-00001" summary="整合跌倒检测，入侵检测，交互检测，情感分析">
       <created>1688925723348</created>
