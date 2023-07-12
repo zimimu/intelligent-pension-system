@@ -91,3 +91,8 @@ def getFaceCollectionStream(request):
     print("getFaceCollectionStream函数被调用，获取的id是：")
     print(id)
     return StreamingHttpResponse(startingcameraservice.video_stream(id), content_type='multipart/x-mixed-replace; boundary=frame')
+
+# 老人年龄分布直方图
+def getOldAge(request):
+    result = oldManage.getOldAge(request)
+    return JsonResponse(result,safe=False)

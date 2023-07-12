@@ -48,7 +48,7 @@ def addOldInfo(request):
                                    firstguardianrela=json_data["firstguardianrela"],firstguardianphone=json_data["firstguardianphone"],
                                    firstguardianwechat=json_data["firstguardianwechat"],secondguardianname=json_data["secondguardianname"],
                                    secondguardianrela=json_data["secondguardianrela"],secondguardianphone=json_data["secondguardianphone"],
-                                   secondguardianwechat=json_data["secondguardianwechat"],healthstate=["healthstate"],description=json_data["description"],
+                                   secondguardianwechat=json_data["secondguardianwechat"],healthstate=json_data["healthstate"],description=json_data["description"],
                                    created=now_time,createby=json_data["username"])
         old.save()
     except:
@@ -78,7 +78,7 @@ def updateOldInfo(request):
                                    firstguardianrela=json_data["firstguardianrela"],firstguardianphone=json_data["firstguardianphone"],
                                    firstguardianwechat=json_data["firstguardianwechat"],secondguardianname=json_data["secondguardianname"],
                                    secondguardianrela=json_data["secondguardianrela"],secondguardianphone=json_data["secondguardianphone"],
-                                   secondguardianwechat=json_data["secondguardianwechat"],healthstate=["healthstate"],
+                                   secondguardianwechat=json_data["secondguardianwechat"],healthstate=json_data["healthstate"],
                                    description=json_data["description"],updated=get_now_time(),updateby=json_data["username"])
     except:
         return {'msg': '服务器错误，请重试', "code": '500'}
@@ -139,3 +139,11 @@ def get_guardian_phone(request):
     phone = res.get("firstguardianphone")
     return {'msg': '获取成功', "code": '200', 'phone': phone}
 
+# 老人年龄分布直方图
+def getOldAge(request):
+    try:
+        old_list = models.oldperson_info.objects.all()
+    except:
+        return {'msg': '不存在本信息', "code": '404'}
+    # 返回年龄，数量
+    return {'msg': '获取成功', 'code': 200}
