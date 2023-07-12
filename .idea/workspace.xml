@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50dc8842-915a-42a8-acde-b328cca1eb7a" name="Changes" comment="eighth commit 添加停止功能">
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caresystem/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caresystem/views/dataManage.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/dataManage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caresystem/views/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/intelligentPessionSystem/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/intelligentPessionSystem/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="50dc8842-915a-42a8-acde-b328cca1eb7a" name="Changes" comment="ninth commit 添加redis查询" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -153,7 +146,7 @@
       <workItem from="1689057560537" duration="2010000" />
       <workItem from="1689064004477" duration="2284000" />
       <workItem from="1689067748020" duration="140000" />
-      <workItem from="1689132612276" duration="6079000" />
+      <workItem from="1689132612276" duration="6932000" />
     </task>
     <task id="LOCAL-00001" summary="整合跌倒检测，入侵检测，交互检测，情感分析">
       <created>1688925723348</created>
@@ -197,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689144448761</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="ninth commit 添加redis查询">
+      <created>1689150168512</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1689150168512</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,7 +246,8 @@
     <MESSAGE value="修了个小错" />
     <MESSAGE value="删除没用文件" />
     <MESSAGE value="eighth commit 添加停止功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="eighth commit 添加停止功能" />
+    <MESSAGE value="ninth commit 添加redis查询" />
+    <option name="LAST_COMMIT_MESSAGE" value="ninth commit 添加redis查询" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
