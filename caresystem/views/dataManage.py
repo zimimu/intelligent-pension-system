@@ -34,8 +34,8 @@ def getEventInfo(request):
     try:
         event_list = models.event_info.objects.all()
     except:
-        return {'msg': '不存在本信息', "code": '204'}
+        return {'msg': '不存在本信息', "code": '404'}
     res = []
     for i in event_list:
         res.append(model_to_dict(i))
-    return {'msg': '获取成功', "code": '200', 'oldList': res}
+    return {'msg': '获取成功', "code": '200', 'eventList': res}

@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50dc8842-915a-42a8-acde-b328cca1eb7a" name="Changes" comment="bug修改">
+    <list default="true" id="50dc8842-915a-42a8-acde-b328cca1eb7a" name="Changes" comment="获取个人中心信息完成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/managementcenter/views/employeeManage.py" beforeDir="false" afterPath="$PROJECT_DIR$/managementcenter/views/employeeManage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usercenter/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/usercenter/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usercenter/views/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/usercenter/views/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/dataManage.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/dataManage.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,6 +151,7 @@
       <workItem from="1688926498532" duration="299000" />
       <workItem from="1688951821795" duration="26000" />
       <workItem from="1688951959307" duration="2679000" />
+      <workItem from="1689128171453" duration="1308000" />
     </task>
     <task id="LOCAL-00001" summary="整合跌倒检测，入侵检测，交互检测，情感分析">
       <created>1688925723348</created>
@@ -210,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689061329697</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="获取个人中心信息完成">
+      <created>1689067704558</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1689067704558</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,7 +253,8 @@
     <MESSAGE value="修了个小错" />
     <MESSAGE value="删除没用文件" />
     <MESSAGE value="bug修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug修改" />
+    <MESSAGE value="获取个人中心信息完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="获取个人中心信息完成" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
