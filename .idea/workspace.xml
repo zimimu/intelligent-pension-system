@@ -4,26 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50dc8842-915a-42a8-acde-b328cca1eb7a" name="Changes" comment="删除没用文件">
+    <list default="true" id="50dc8842-915a-42a8-acde-b328cca1eb7a" name="Changes" comment="eighth commit 添加停止功能">
       <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/intelligentPessionSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/intelligentPessionSystem.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caresystem/views/supervision/strangers/snapshot_20230710_013052.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caresystem/views/supervision/strangers/snapshot_20230710_013055.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caresystem/views/supervision/strangers/snapshot_20230710_013057.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caresystem/views/supervision/strangers/snapshot_20230710_013058.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caresystem/views/supervision/strangers/snapshot_20230710_013059.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceInfo/images/108/blink_10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceInfo/images/108/blink_11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceInfo/images/108/blink_12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceInfo/images/108/blink_5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceInfo/images/108/blink_6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceInfo/images/108/blink_7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceInfo/images/108/blink_8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceInfo/images/108/blink_9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/dataManage.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/dataManage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/intelligentPessionSystem/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/intelligentPessionSystem/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/managementcenter/views/faceCollection/camera/camerautil.py" beforeDir="false" afterPath="$PROJECT_DIR$/managementcenter/views/faceCollection/camera/camerautil.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,12 +40,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2SLFPBQAI9OUOtBGTuM6ZGn9Vuc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -166,7 +153,7 @@
       <workItem from="1689057560537" duration="2010000" />
       <workItem from="1689064004477" duration="2284000" />
       <workItem from="1689067748020" duration="140000" />
-      <workItem from="1689132612276" duration="1346000" />
+      <workItem from="1689132612276" duration="6079000" />
     </task>
     <task id="LOCAL-00001" summary="整合跌倒检测，入侵检测，交互检测，情感分析">
       <created>1688925723348</created>
@@ -203,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688952422276</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="eighth commit 添加停止功能">
+      <created>1689144448760</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1689144448761</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,7 +208,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin-ll" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -239,7 +245,8 @@
     <MESSAGE value="整合跌倒检测，入侵检测，交互检测，情感分析" />
     <MESSAGE value="修了个小错" />
     <MESSAGE value="删除没用文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="删除没用文件" />
+    <MESSAGE value="eighth commit 添加停止功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="eighth commit 添加停止功能" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
