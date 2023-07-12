@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="50dc8842-915a-42a8-acde-b328cca1eb7a" name="Changes" comment="修改部分bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caresystem/views/dataManage.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/dataManage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/managementcenter/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/managementcenter/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/managementcenter/views/oldManage.py" beforeDir="false" afterPath="$PROJECT_DIR$/managementcenter/views/oldManage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/managementcenter/views/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/managementcenter/views/views.py" afterDir="false" />
@@ -154,7 +153,7 @@
       <workItem from="1688926498532" duration="299000" />
       <workItem from="1688951821795" duration="26000" />
       <workItem from="1688951959307" duration="2679000" />
-      <workItem from="1689128171453" duration="6145000" />
+      <workItem from="1689128171453" duration="13878000" />
     </task>
     <task id="LOCAL-00001" summary="整合跌倒检测，入侵检测，交互检测，情感分析">
       <created>1688925723348</created>
@@ -233,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689130013332</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="修改部分bug">
+      <created>1689144391137</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1689144391137</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

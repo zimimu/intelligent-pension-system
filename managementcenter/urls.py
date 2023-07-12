@@ -20,5 +20,5 @@ urlpatterns = [
     path('getVolunteerList/', manage_views.getVolunteerList),
     path('getGuartionPhone/', manage_views.getGuartionPhone),
     path('getFaceCollectionStream/', manage_views.getFaceCollectionStream),
-    path('getOldAge/',manage_views.getOldAge)
+    path('getOldAgeNum/',manage_views.getOldAgeNum)
 ]

@@ -1,7 +1,9 @@
 # 老人信息管理
 import datetime
 import json
+from time import strptime
 
+from dateutil.relativedelta import relativedelta
 from django.core import serializers
 from django.forms import model_to_dict
 from django.utils import timezone
@@ -140,10 +142,37 @@ def get_guardian_phone(request):
     return {'msg': '获取成功', "code": '200', 'phone': phone}
 
 # 老人年龄分布直方图
-def getOldAge(request):
+def getOldAgeNum(request):
+    # 取出old 里面的生日日期
     try:
-        old_list = models.oldperson_info.objects.all()
+        old = list(models.oldperson_info.objects.values_list('birthday',flat=True))
     except:
         return {'msg': '不存在本信息', "code": '404'}
-    # 返回年龄，数量
-    return {'msg': '获取成功', 'code': 200}
+    # 计算old 的年龄，归类到数组age中
+    today = datetime.datetime.today()
+    temp = []
+    age = []
+    for i in range(0, len(old)):
+        birthday = old[i]
+        # print(birthday)
+        temp.append(relativedelta(today, birthday))
+        age.append(temp[i].years)
+        print("age:")
+        print(i)
+        print(age[i])
+    array = [0,0,0,0]
+    for i in range(0,len(age)):
+        if age[i] <= 50:
+            array[0] = array[0] + 1
+        elif age[i] >50 and age[i] <= 70:
+            array[1] = array[1] + 1
+        elif age[i] >70 and age[i] <= 90:
+            array[2] = array[2] + 1
+        else:
+            array[3] = array[3] + 1
+    print("array:")
+    print(array)
+    # 返回数组[],分别表示 0-50，50-70，70-90，90- 年龄段老人数目
+    # array = [1, 20, 32, 6]
+
+    return {'msg': '获取成功', 'code': 200, 'array': array }

@@ -93,6 +93,6 @@ def getFaceCollectionStream(request):
     return StreamingHttpResponse(startingcameraservice.video_stream(id), content_type='multipart/x-mixed-replace; boundary=frame')
 
 # 老人年龄分布直方图
-def getOldAge(request):
-    result = oldManage.getOldAge(request)
+def getOldAgeNum(request):
+    result = oldManage.getOldAgeNum(request)
     return JsonResponse(result,safe=False)
