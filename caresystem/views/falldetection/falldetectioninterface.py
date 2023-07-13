@@ -1,12 +1,12 @@
 # 导入包
 import argparse
-from caresystem.views.oldcare.facial import FaceUtil
+from oldcare.facial import FaceUtil
 from PIL import Image, ImageDraw, ImageFont
-from caresystem.views.oldcare.utils import fileassistant
+from oldcare.utils import fileassistant
 import numpy as np
 import time
 import cv2
-import caresystem.views.falldetection.PoseModule as pm
+import PoseModule as pm
 import math
 
 # 全局变量
@@ -32,20 +32,25 @@ def falldetection(success, img):
         if len(lmList) != 0:
             if True:
                 # 两髋中心点
-                point_kuan = detector.midpoint(img, 23, 24, draw=False)
+                point_hip = detector.midpoint(img, 23, 24, draw=False)
                 point_foot = detector.midpoint(img, 29, 30, draw=False)
+                point_shouder = detector.midpoint(img, 11, 12, draw=False)
                 # 两脚中点
 
-                baseH = (point_kuan['y'] - point_foot['y'])
+                baseH = (point_hip['y'] - point_foot['y'])
+                mark=(point_shouder['y'] - point_hip['y'])
+                print(baseH,mark)
                 if baseH > -40 :
                     bs = 2
                 elif baseH < -40:
                     bs = 0
+                    i = 0
             if bs == 2:
                 cv2.putText(img, str("fall"), (450, 100), cv2.FONT_HERSHEY_PLAIN, 5, (255, 255, 0), 5)
         else:
             bs = 0
-        print( "%.3f" % baseH, bs)
+            i = 0
+        print("%.3f" % baseH, bs)
         cTime = time.time()
         fps = 1 / (cTime - pTime)
         pTime = cTime

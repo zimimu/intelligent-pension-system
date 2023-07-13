@@ -7,6 +7,7 @@ import argparse
 from keras.preprocessing.image import image_utils
 from keras.models import load_model
 
+
 def fire_detection(frame):
     # 全局变量
     model_path = 'caresystem/views/models/fire_detection.hdf5'
@@ -40,6 +41,7 @@ def fire_detection(frame):
         cv2.imwrite(os.path.join(output_fall_path, 'snapshot_%s.jpg' % (time.strftime('%Y%m%d_%H%M%S'))), frame)
 
     return frame
+
 
 # 初始化摄像头
 vs = cv2.VideoCapture('input_video.mp4')

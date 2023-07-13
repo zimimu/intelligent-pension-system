@@ -5,10 +5,11 @@ import threading
 
 from ultralytics import YOLO
 
+i = 0
 
-i=0
+model = YOLO('E:/xxq/demo04/caresystem/views/models/best-violence.pt')
 
-model=YOLO('E:/xxq/demo04/caresystem/views/models/best-violence.pt')
+
 class RecordingThread(threading.Thread):
     def __init__(self, name, camera, save_video_path):
         threading.Thread.__init__(self)
@@ -57,14 +58,14 @@ class VideoCamera(object):
 
         if ret:
             frame = cv2.flip(frame, 1)
-            #frame=checkingstrangersandfacialexpression(ret, frame)
-            #frame,i=falldetection(ret, frame,i)
-            #frame=volunteeractivity(ret,frame)
-            #frame=fire_detection(frame)
-            #frame=checkingfence(frame)
-            #frame,i=collectingfaces(frame,108,i)
-            frame=model(frame)
-            frame=frame[0].plot()
+            # frame=checkingstrangersandfacialexpression(ret, frame)
+            # frame,i=falldetection(ret, frame,i)
+            # frame=volunteeractivity(ret,frame)
+            # frame=fire_detection(frame)
+            # frame=checkingfence(frame)
+            # frame,i=collectingfaces(frame,108,i)
+            frame = model(frame)
+            frame = frame[0].plot()
             ret, jpeg = cv2.imencode('.jpg', frame)
             return jpeg.tobytes()
 
@@ -81,5 +82,5 @@ class VideoCamera(object):
     def stop_record(self):
         self.is_record = False
 
-        if self.recordingThread != None:
+        if self.recordingThread is not None:
             self.recordingThread.stop()

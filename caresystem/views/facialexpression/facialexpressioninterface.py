@@ -1,5 +1,5 @@
 # 导入包
-import argparse
+
 from caresystem.views.oldcare.facial import FaceUtil
 from PIL import Image, ImageDraw, ImageFont
 from caresystem.views.oldcare.utils import fileassistant
@@ -181,7 +181,7 @@ def checkingstrangersandfacialexpression(grabbed, frame):
         img_PIL = Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
 
         draw = ImageDraw.Draw(img_PIL)
-        if (name != 'Unknown'):
+        if name != 'Unknown':
             final_label = id_card_to_name[name] + ': ' + facial_expression_label
         else:
             final_label = 'Unknown'

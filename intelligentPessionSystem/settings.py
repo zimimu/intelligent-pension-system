@@ -252,9 +252,9 @@ WSGI_APPLICATION = 'intelligentPessionSystem.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # 修改为mysql
-        'NAME': "pension",  # 数据库名字
+        'NAME': "oldcare",  # 数据库名字
         "USER": "root",  # 用户名
-        "PASSWORD": "0626",  # 密码
+        "PASSWORD": "hzt123456",  # 密码
         "HOST": "127.0.0.1",  # ip
         "PORT": "3306"  # 端口
     }

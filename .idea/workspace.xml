@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50dc8842-915a-42a8-acde-b328cca1eb7a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/caresystem/views/models/best-violence.pt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caresystem/views/violencedetection/camera/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caresystem/views/violencedetection/camera/camerautil.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caresystem/views/violencedetection/startingcameraservice.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/intelligentPessionSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/intelligentPessionSystem.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="50dc8842-915a-42a8-acde-b328cca1eb7a" name="Changes" comment="打架检测">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caresystem/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caresystem/views/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/facialexpression/facialexpressioninterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/facialexpression/facialexpressioninterface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/falldetection/falldetectioninterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/falldetection/falldetectioninterface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/fencein/startingcameraservice.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/fencein/startingcameraservice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/firedetection/firedetectioninterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/firedetection/firedetectioninterface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/violencedetection/camera/camerautil.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/violencedetection/camera/camerautil.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/violencedetection/startingcameraservice.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/violencedetection/startingcameraservice.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/intelligentPessionSystem/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/intelligentPessionSystem/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +97,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/xxq/demo04/caresystem/views/models",
+    "last_opened_file_path": "E:/xxq/ruqin/changeable_region_detection",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -161,7 +159,7 @@
       <updated>1688917927655</updated>
       <workItem from="1688917928823" duration="7190000" />
       <workItem from="1688925634110" duration="660000" />
-      <workItem from="1689212079099" duration="1995000" />
+      <workItem from="1689212079099" duration="6570000" />
     </task>
     <task id="LOCAL-00001" summary="整合跌倒检测，入侵检测，交互检测，情感分析">
       <created>1688925723348</created>
@@ -198,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689148567154</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="打架检测">
+      <created>1689214890919</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1689214890919</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,7 +226,8 @@
     <MESSAGE value="bug修改" />
     <MESSAGE value="路径修改" />
     <MESSAGE value="火灾检测修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="火灾检测修改" />
+    <MESSAGE value="打架检测" />
+    <option name="LAST_COMMIT_MESSAGE" value="打架检测" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
