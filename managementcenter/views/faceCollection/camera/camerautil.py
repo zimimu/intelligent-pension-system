@@ -38,6 +38,8 @@ class VideoCamera(object):
             #frame=checkingfence(frame)
             frame,i=collectingfaces(frame,id,i)
             ret, jpeg = cv2.imencode('.jpg', frame)
+            if (i // 15 > 7):
+                self.cap.release()
             return jpeg.tobytes()
 
         else:

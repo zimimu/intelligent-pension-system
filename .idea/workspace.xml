@@ -42,12 +42,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2SLFPBQAI9OUOtBGTuM6ZGn9Vuc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -82,7 +82,29 @@
       <recent name="E:\xxq\demo09\caresystem\views\facialexpression" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Django Server.Unnamed">
+    <configuration name="startingcameraservice" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="intelligentPessionSystem" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/caresystem/views/falldetection" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/caresystem/views/falldetection/startingcameraservice.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unnamed" type="Python.DjangoServer" factoryName="Django server" nameIsGenerated="true">
       <module name="intelligentPessionSystem" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -107,6 +129,15 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Django Server.Unnamed" />
+      <item itemvalue="Python.startingcameraservice" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.startingcameraservice" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -119,6 +150,14 @@
       <workItem from="1688917928823" duration="7190000" />
       <workItem from="1688925634110" duration="660000" />
       <workItem from="1689212633970" duration="3430000" />
+      <workItem from="1688925634110" duration="827000" />
+      <workItem from="1688926498532" duration="299000" />
+      <workItem from="1688951821795" duration="26000" />
+      <workItem from="1688951959307" duration="2679000" />
+      <workItem from="1689057560537" duration="2010000" />
+      <workItem from="1689064004477" duration="2284000" />
+      <workItem from="1689067748020" duration="140000" />
+      <workItem from="1689132612276" duration="6932000" />
     </task>
     <task id="LOCAL-00001" summary="整合跌倒检测，入侵检测，交互检测，情感分析">
       <created>1688925723348</created>
@@ -149,6 +188,21 @@
       <updated>1689147850316</updated>
     </task>
     <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00006" summary="eighth commit 添加停止功能">
+      <created>1689144448760</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1689144448761</updated>
+    </task>
+    <task id="LOCAL-00007" summary="ninth commit 添加redis查询">
+      <created>1689150168512</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1689150168512</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,7 +213,34 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin-ll" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/origin-ll" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -171,6 +252,11 @@
     <MESSAGE value="bug修改" />
     <MESSAGE value="路径修改" />
     <option name="LAST_COMMIT_MESSAGE" value="路径修改" />
+    <MESSAGE value="修了个小错" />
+    <MESSAGE value="删除没用文件" />
+    <MESSAGE value="eighth commit 添加停止功能" />
+    <MESSAGE value="ninth commit 添加redis查询" />
+    <option name="LAST_COMMIT_MESSAGE" value="ninth commit 添加redis查询" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">

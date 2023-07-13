@@ -35,3 +35,20 @@ def getVolunteeractStream(request):
 
 def getFiredetectionStream(request):
     return StreamingHttpResponse(caresystem.views.firedetection.startingcameraservice.video_stream(),content_type='multipart/x-mixed-replace; boundary=frame')
+
+
+def getEmotionList(request):
+    result = dataManage.getEmotionEvent(request)
+    return JsonResponse(result, safe=False)
+
+def getFallList(request):
+    result = dataManage.getFallEvent(request)
+    return JsonResponse(result, safe=False)
+
+def getIntrusionList(request):
+    result = dataManage.getIntrusionEvent(request)
+    return JsonResponse(result, safe=False)
+
+def getInteractList(request):
+    result = dataManage.getInteractEvent(request)
+    return JsonResponse(result, safe=False)
