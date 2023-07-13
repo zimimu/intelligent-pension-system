@@ -4,8 +4,7 @@ import cv2
 import threading
 
 from caresystem.views.volunteeract.volunteeractivityinterface import volunteeractivity
-from managementcenter.views.faceCollection.collectingfaceinterface import collectingfaces
-from managementcenter.views.faceCollection.facial import FaceUtil
+
 i=0
 
 

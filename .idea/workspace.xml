@@ -4,15 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50dc8842-915a-42a8-acde-b328cca1eb7a" name="Changes" comment="打架检测">
+    <list default="true" id="50dc8842-915a-42a8-acde-b328cca1eb7a" name="Changes" comment="人脸模型训练（会卡&#10;两个红框bug&#10;计数逻辑修改">
+      <change afterPath="$PROJECT_DIR$/managementcenter/views/faceCollection/voices/output.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/managementcenter/views/models/face_recognition_hog.pickle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/facialexpression/camera/camerautil.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/facialexpression/camera/camerautil.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caresystem/views/facialexpression/facialexpressioninterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/facialexpression/facialexpressioninterface.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caresystem/views/falldetection/falldetectioninterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/falldetection/falldetectioninterface.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caresystem/views/fencein/startingcameraservice.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/fencein/startingcameraservice.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caresystem/views/firedetection/firedetectioninterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/firedetection/firedetectioninterface.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caresystem/views/violencedetection/camera/camerautil.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/violencedetection/camera/camerautil.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caresystem/views/violencedetection/startingcameraservice.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/violencedetection/startingcameraservice.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/intelligentPessionSystem/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/intelligentPessionSystem/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/fencein/camera/camerautil.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/fencein/camera/camerautil.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/firedetection/camera/camerautil.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/firedetection/camera/camerautil.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/mobile.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/mobile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/volunteeract/camera/camerautil.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/volunteeract/camera/camerautil.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/volunteeract/volunteeractivityinterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/volunteeract/volunteeractivityinterface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/managementcenter/views/faceCollection/camera/camerautil.py" beforeDir="false" afterPath="$PROJECT_DIR$/managementcenter/views/faceCollection/camera/camerautil.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/managementcenter/views/faceCollection/collectingfacesinterface .py" beforeDir="false" afterPath="$PROJECT_DIR$/managementcenter/views/faceCollection/collectingfacesinterface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/managementcenter/views/faceCollection/startingcameraservice.py" beforeDir="false" afterPath="$PROJECT_DIR$/managementcenter/views/faceCollection/startingcameraservice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/managementcenter/views/oldManage.py" beforeDir="false" afterPath="$PROJECT_DIR$/managementcenter/views/oldManage.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +104,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/xxq/ruqin/changeable_region_detection",
+    "last_opened_file_path": "E:/xxq/demo04/managementcenter/views",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -108,11 +115,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\xxq\demo04\caresystem\views\models" />
-      <recent name="E:\xxq\demo04\caresystem\views\violencedetection" />
-      <recent name="E:\xxq\demo04\caresystem\views\firedetection" />
-      <recent name="E:\xxq\demo09\caresystem\views\volunteeract" />
-      <recent name="E:\xxq\demo09\caresystem\views\falldetection" />
+      <recent name="E:\xxq\demo04\managementcenter\views" />
+      <recent name="E:\xxq\demo04\managementcenter\views\faceCollection\voices" />
+      <recent name="E:\xxq\demo04\caresystem\views\volunteeract" />
+      <recent name="E:\xxq\demo04\caresystem\views\facialexpression" />
+      <recent name="E:\xxq\demo04\caresystem\views\falldetection" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\xxq\demo09" />
@@ -122,7 +129,29 @@
       <recent name="E:\xxq\demo09\caresystem\views\facialexpression" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Django Server.Unnamed">
+    <configuration name="startingcameraservice" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="intelligentPessionSystem" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/managementcenter/views/faceCollection" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/managementcenter/views/faceCollection/startingcameraservice.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unnamed" type="Python.DjangoServer" factoryName="Django server" nameIsGenerated="true">
       <module name="intelligentPessionSystem" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -148,6 +177,11 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.startingcameraservice" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -160,6 +194,8 @@
       <workItem from="1688917928823" duration="7190000" />
       <workItem from="1688925634110" duration="660000" />
       <workItem from="1689212079099" duration="6570000" />
+      <workItem from="1689220903415" duration="297000" />
+      <workItem from="1689228983746" duration="6993000" />
     </task>
     <task id="LOCAL-00001" summary="整合跌倒检测，入侵检测，交互检测，情感分析">
       <created>1688925723348</created>
@@ -203,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689214890919</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="人脸模型训练（会卡&#10;两个红框bug">
+      <created>1689221118633</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1689221118633</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,11 +270,12 @@
     <MESSAGE value="路径修改" />
     <MESSAGE value="火灾检测修改" />
     <MESSAGE value="打架检测" />
-    <option name="LAST_COMMIT_MESSAGE" value="打架检测" />
+    <MESSAGE value="人脸模型训练（会卡&#10;两个红框bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="人脸模型训练（会卡&#10;两个红框bug" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/demo04$startingcameraservice.coverage" NAME="startingcameraservice Coverage Results" MODIFIED="1688954280524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/caresystem/views/falldetection" />
+    <SUITE FILE_PATH="coverage/demo04$startingcameraservice.coverage" NAME="startingcameraservice Coverage Results" MODIFIED="1689233481436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/managementcenter/views/faceCollection" />
     <SUITE FILE_PATH="coverage/demo04$manage.coverage" NAME="manage Coverage Results" MODIFIED="1688959290483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

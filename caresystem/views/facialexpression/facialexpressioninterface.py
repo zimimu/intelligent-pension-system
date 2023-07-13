@@ -1,5 +1,5 @@
 # 导入包
-
+import argparse
 from caresystem.views.oldcare.facial import FaceUtil
 from PIL import Image, ImageDraw, ImageFont
 from caresystem.views.oldcare.utils import fileassistant
@@ -47,11 +47,13 @@ facial_expression_limit_time = 2  # if >= 1 seconds, he/she is smiling
 # 初始化人脸识别模型
 faceutil = FaceUtil(facial_recognition_model_path)
 facial_expression_model = load_model(facial_expression_model_path)
-python_path = '/home/reed/anaconda3/envs/tensorflow/bin/python'
+
+# 数据库插入控制
+insert = 0
 
 
 def checkingstrangersandfacialexpression(grabbed, frame):
-    global strangers_timing, strangers_start_time, facial_expression_timing, facial_expression_start_time
+    global strangers_timing, strangers_start_time, facial_expression_timing, facial_expression_start_time, insert
     counter = 0
     print()
     if not grabbed:
@@ -63,19 +65,6 @@ def checkingstrangersandfacialexpression(grabbed, frame):
 
     face_location_list, names = faceutil.get_face_location_and_name(
         frame)
-
-    # 得到画面的四分之一位置和四分之三位置，并垂直划线
-    one_fourth_image_center = (int(VIDEO_WIDTH / 4),
-                               int(VIDEO_HEIGHT / 4))
-    three_fourth_image_center = (int(VIDEO_WIDTH / 4 * 3),
-                                 int(VIDEO_HEIGHT / 4 * 3))
-
-    cv2.line(frame, (one_fourth_image_center[0], 0),
-             (one_fourth_image_center[0], VIDEO_HEIGHT),
-             (0, 255, 255), 1)
-    cv2.line(frame, (three_fourth_image_center[0], 0),
-             (three_fourth_image_center[0], VIDEO_HEIGHT),
-             (0, 255, 255), 1)
 
     # 处理每一张识别到的人脸
     for ((left, top, right, bottom), name) in zip(face_location_list, names):
@@ -113,29 +102,14 @@ def checkingstrangersandfacialexpression(grabbed, frame):
                     cv2.imwrite(
                         os.path.join(output_stranger_path, 'snapshot_%s.jpg' % (time.strftime('%Y%m%d_%H%M%S'))), frame)
                     # insert into database
-                    # command = '%s inserting.py --event_desc %s--event_type2 - -event_location % s' % (python_path, event_desc, event_location)
-                    # p = subprocess.Popen(command, shell=True)
-
-                    # 开始陌生人追踪
-                    unknown_face_center = (int((right + left) / 2), int((top + bottom) / 2))
-
-                    cv2.circle(frame, (unknown_face_center[0],
-                                       unknown_face_center[1]), 4, (0, 255, 0), -1)
-
-                    direction = ''
-                    # face locates too left; servo need to turn right,
-                    # so that face turns right as well
-                    if unknown_face_center[0] < one_fourth_image_center[0]:
-                        direction = 'right'
-                    elif unknown_face_center[0] > three_fourth_image_center[0]:
-                        direction = 'left'
-
-                    # adjust to servo
-                    if direction:
-                        print('%d-摄像头需要 turn %s %d 度' % (counter, direction, ANGLE))
+                    if insert == 0:
+                        #插入数据库
+                        print("陌生人出现！")
+                        insert = 1
 
         else:  # everything is ok
             strangers_timing = 0
+            insert = 0
 
         # 表情检测逻辑
         # 如果不是陌生人，且对象是老人
@@ -166,12 +140,14 @@ def checkingstrangersandfacialexpression(grabbed, frame):
                     cv2.imwrite(os.path.join(output_smile_path, 'snapshot_%s.jpg' % (time.strftime('%Y%m%d_%H%M%S'))),
                                 frame)
                     # insert into database
-                    command = '%s inserting.py --event_desc %s--event_type0 - -event_location % s--old_people_id % d' % (
-                        python_path, event_desc, event_location, int(name))
-                    p = subprocess.Popen(command, shell=True)
+                    if (insert == 0):
+                        #插入数据库
+                        print("老人笑了")
+                        insert = 1
 
             else:  # everything is ok
                 facial_expression_timing = 0
+                insert = 0
 
         else:  # 如果是陌生人，则不检测表情
             facial_expression_label = ''
@@ -181,7 +157,7 @@ def checkingstrangersandfacialexpression(grabbed, frame):
         img_PIL = Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
 
         draw = ImageDraw.Draw(img_PIL)
-        if name != 'Unknown':
+        if (name != 'Unknown'):
             final_label = id_card_to_name[name] + ': ' + facial_expression_label
         else:
             final_label = 'Unknown'
@@ -190,4 +166,4 @@ def checkingstrangersandfacialexpression(grabbed, frame):
 
         # 转换回OpenCV格式
         frame = cv2.cvtColor(np.asarray(img_PIL), cv2.COLOR_RGB2BGR)
-        return frame
+    return frame

@@ -1,14 +1,11 @@
 # 老人信息管理
 import datetime
 import json
-from time import strptime
 
 from dateutil.relativedelta import relativedelta
-from django.core import serializers
 from django.forms import model_to_dict
 from django.utils import timezone
 import pytz
-from managementcenter.views import globeFunction
 
 from managementcenter import models
 
@@ -26,6 +23,7 @@ def get_now_time():
     print(now)
     return now
 
+
 def addOldInfo(request):
     # 得到的是一个二进制数据
     json_str = request.body
@@ -40,30 +38,35 @@ def addOldInfo(request):
     if models.oldperson_info.objects.filter(idcard=idcard).exists():
         return {'msg': '老人信息已经存在，请查看信息是否填写有误，或者选择更新信息', "code": '205'}
 
-    birthday = datetime.date(*map(int,json_data["birthday"].split('-')))
+    birthday = datetime.date(*map(int, json_data["birthday"].split('-')))
     print(birthday)
     now_time = get_now_time()
 
     try:
-        old = models.oldperson_info(oldname=json_data["oldname"],sex=json_data["sex"],phone=json_data["phone"],
-                                   idcard=idcard,birthday=birthday,checkindate=now_time,roomnum=json_data["roomnum"],firstguardianname=json_data["firstguardianname"],
-                                   firstguardianrela=json_data["firstguardianrela"],firstguardianphone=json_data["firstguardianphone"],
-                                   firstguardianwechat=json_data["firstguardianwechat"],secondguardianname=json_data["secondguardianname"],
-                                   secondguardianrela=json_data["secondguardianrela"],secondguardianphone=json_data["secondguardianphone"],
-                                   secondguardianwechat=json_data["secondguardianwechat"],healthstate=json_data["healthstate"],description=json_data["description"],
-                                   created=now_time,createby=json_data["username"])
+        old = models.oldperson_info(oldname=json_data["oldname"], sex=json_data["sex"], phone=json_data["phone"],
+                                    idcard=idcard, birthday=birthday, checkindate=now_time,
+                                    roomnum=json_data["roomnum"], firstguardianname=json_data["firstguardianname"],
+                                    firstguardianrela=json_data["firstguardianrela"],
+                                    firstguardianphone=json_data["firstguardianphone"],
+                                    firstguardianwechat=json_data["firstguardianwechat"],
+                                    secondguardianname=json_data["secondguardianname"],
+                                    secondguardianrela=json_data["secondguardianrela"],
+                                    secondguardianphone=json_data["secondguardianphone"],
+                                    secondguardianwechat=json_data["secondguardianwechat"],
+                                    healthstate=json_data["healthstate"], description=json_data["description"],
+                                    created=now_time, createby=json_data["username"])
         old.save()
     except:
         return {'msg': '服务器错误，请重试', "code": '500'}
 
     try:
-        face = models.face_recognition_info(identity="old_people",identity_id=old.ID,name=json_data["oldname"])
+        face = models.face_recognition_info(identity="old_people", identity_id=old.ID, name=json_data["oldname"])
         face.save()
     except:
         return {'msg': '服务器错误，请重试', "code": '500'}
 
+    return {'msg': '添加成功', "code": '200', "id": face.ID}
 
-    return {'msg': '添加成功', "code": '200', "id":face.ID}
 
 def updateOldInfo(request):
     # 得到的是一个二进制数据
@@ -76,16 +79,23 @@ def updateOldInfo(request):
 
     id = json_data["id"]
     try:
-        models.oldperson_info.objects.filter(ID=id).update(phone=json_data["phone"],roomnum=json_data["roomnum"],firstguardianname=json_data["firstguardianname"],
-                                   firstguardianrela=json_data["firstguardianrela"],firstguardianphone=json_data["firstguardianphone"],
-                                   firstguardianwechat=json_data["firstguardianwechat"],secondguardianname=json_data["secondguardianname"],
-                                   secondguardianrela=json_data["secondguardianrela"],secondguardianphone=json_data["secondguardianphone"],
-                                   secondguardianwechat=json_data["secondguardianwechat"],healthstate=json_data["healthstate"],
-                                   description=json_data["description"],updated=get_now_time(),updateby=json_data["username"])
+        models.oldperson_info.objects.filter(ID=id).update(phone=json_data["phone"], roomnum=json_data["roomnum"],
+                                                           firstguardianname=json_data["firstguardianname"],
+                                                           firstguardianrela=json_data["firstguardianrela"],
+                                                           firstguardianphone=json_data["firstguardianphone"],
+                                                           firstguardianwechat=json_data["firstguardianwechat"],
+                                                           secondguardianname=json_data["secondguardianname"],
+                                                           secondguardianrela=json_data["secondguardianrela"],
+                                                           secondguardianphone=json_data["secondguardianphone"],
+                                                           secondguardianwechat=json_data["secondguardianwechat"],
+                                                           healthstate=json_data["healthstate"],
+                                                           description=json_data["description"], updated=get_now_time(),
+                                                           updateby=json_data["username"])
     except:
         return {'msg': '服务器错误，请重试', "code": '500'}
 
     return {'msg': '更新成功', "code": '200'}
+
 
 def checkoutOld(request):
     # 得到的是一个二进制数据
@@ -99,15 +109,16 @@ def checkoutOld(request):
     id = json_data["id"]
 
     try:
-        models.oldperson_info.objects.filter(ID=id).update(checkoutdate=get_now_time(),description=json_data["description"],
-                                                               updated=get_now_time(),updateby=json_data["username"])
+        models.oldperson_info.objects.filter(ID=id).update(checkoutdate=get_now_time(),
+                                                           description=json_data["description"],
+                                                           updated=get_now_time(), updateby=json_data["username"])
     except:
         return {'msg': '服务器错误，请重试', "code": '500'}
 
     return {'msg': '更新成功', "code": '200'}
 
-def checkOldById(request):
 
+def checkOldById(request):
     id = request.GET["id"]
     print(id)
     if id:
@@ -121,6 +132,7 @@ def checkOldById(request):
     else:
         return {'msg': '请输入id', "code": '205'}
 
+
 def getOldList(request):
     try:
         old_list = models.oldperson_info.objects.all()
@@ -130,6 +142,7 @@ def getOldList(request):
     for i in old_list:
         res.append(model_to_dict(i))
     return {'msg': '获取成功', "code": '200', 'oldList': res}
+
 
 def get_guardian_phone(request):
     id = request.GET["id"]
@@ -141,11 +154,12 @@ def get_guardian_phone(request):
     phone = res.get("firstguardianphone")
     return {'msg': '获取成功', "code": '200', 'phone': phone}
 
+
 # 老人年龄分布直方图
 def getOldAgeNum(request):
     # 取出old 里面的生日日期
     try:
-        old = list(models.oldperson_info.objects.values_list('birthday',flat=True))
+        old = list(models.oldperson_info.objects.values_list('birthday', flat=True))
     except:
         return {'msg': '不存在本信息', "code": '404'}
     # 计算old 的年龄，归类到数组age中
@@ -160,13 +174,13 @@ def getOldAgeNum(request):
         print("age:")
         print(i)
         print(age[i])
-    array = [0,0,0,0]
-    for i in range(0,len(age)):
+    array = [0, 0, 0, 0]
+    for i in range(0, len(age)):
         if age[i] <= 50:
             array[0] = array[0] + 1
-        elif age[i] >50 and age[i] <= 70:
+        elif 50 < age[i] <= 70:
             array[1] = array[1] + 1
-        elif age[i] >70 and age[i] <= 90:
+        elif 70 < age[i] <= 90:
             array[2] = array[2] + 1
         else:
             array[3] = array[3] + 1
@@ -175,4 +189,4 @@ def getOldAgeNum(request):
     # 返回数组[],分别表示 0-50，50-70，70-90，90- 年龄段老人数目
     # array = [1, 20, 32, 6]
 
-    return {'msg': '获取成功', 'code': 200, 'array': array }
+    return {'msg': '获取成功', 'code': 200, 'array': array}

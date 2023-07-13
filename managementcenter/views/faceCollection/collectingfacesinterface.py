@@ -1,7 +1,8 @@
 # 导入包
-import argparse
 
+from aip import AipSpeech
 from imutils import paths
+from playsound import playsound
 
 from managementcenter.views.faceCollection.facial import FaceUtil
 from PIL import Image, ImageDraw, ImageFont
@@ -23,11 +24,33 @@ action_map = {'blink': '请眨眼', 'open_mouth': '请张嘴',
               'smile': '请笑一笑', 'rise_head': '请抬头',
               'bow_head': '请低头', 'look_left': '请看左边',
               'look_right': '请看右边'}
-imagedir = 'faceInfo/images'
+imagedir = 'managementcenter/views/faceCollection/faceInfo/images'
 # global variable
-dataset_path = 'faceInfo/images'
-output_encoding_file_path = 'models/face_recognition_hog.pickle'
+dataset_path = 'managementcenter/views/faceCollection/faceInfo/images'
+output_encoding_file_path = 'managementcenter/views/models/face_recognition_hog.pickle'
 image_paths = list(paths.list_images(dataset_path))
+output_file = 'managementcenter/views/faceCollection/voices/output.mp3'
+
+# 在百度AI平台创建应用获取以下信息
+APP_ID = '36107412'
+API_KEY = 'bSYejXnTAXfobnoAl2qYZGvE'
+SECRET_KEY = '6GhsKVXqbuYhifByATGTvGRkBGsddGHK'
+
+
+def text_to_speech(text, output_file):
+    client = AipSpeech(APP_ID, API_KEY, SECRET_KEY)
+
+    result = client.synthesis(text, 'zh', 1, {
+        'vol': 5,
+        'spd': 5,
+        'pit': 5,
+        'per': 3
+    })
+
+    if not isinstance(result, dict):
+        with open(output_file, 'wb') as f:
+            f.write(result)
+
 
 def collectingfaces(image, id, counter):
     global error, start_time, limit_time
@@ -78,10 +101,13 @@ def collectingfaces(image, id, counter):
         # 转换回OpenCV格式
         image = cv2.cvtColor(np.asarray(img_PIL), cv2.COLOR_RGB2BGR)
         counter += 1
-    if (counter > 4 and counter <109 and error != 1):
-        action_name = action_map[action_list[(counter-4) // 15]]
-        print('%s-%d' % (action_name, counter-4))
-        print((counter-4) // 15)
+    if (counter > 4 and counter < 109 and error != 1):
+        action_name = action_map[action_list[(counter - 4) // 15]]
+        if ((counter - 4) % 15) == 1:
+            text_to_speech(action_name, output_file)
+            playsound(output_file)
+        print('%s-%d' % (action_name, counter - 4))
+        print((counter - 4) // 15)
         origin_img = image.copy()  # 保存时使用
 
         img_PIL = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
@@ -92,30 +118,43 @@ def collectingfaces(image, id, counter):
         # 转换回OpenCV格式
         image = cv2.cvtColor(np.asarray(img_PIL), cv2.COLOR_RGB2BGR)
 
-        image_name = os.path.join(imagedir, str(id), action_list[(counter-4) // 15] + '_' + str((counter-4)) + '.jpg')
+        image_name = os.path.join(imagedir, str(id),
+                                  action_list[(counter - 4) // 15] + '_' + str((counter - 4)) + '.jpg')
         cv2.imwrite(image_name, origin_img)  # 保存
         counter += 1
-    if (counter >=109 and counter <113 and error != 1):
+    if (counter >= 109 and counter < 113 and error != 1):
         img_PIL = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
         draw = ImageDraw.Draw(img_PIL)
-        draw.text((int(image.shape[1] / 2), 30), "采集结束", font=ImageFont.truetype(r'../msyh.ttc', 40),fill=(255, 0, 0))  # 显示字
+        draw.text((int(image.shape[1] / 2), 30), "采集结束", font=ImageFont.truetype(r'../msyh.ttc', 40),
+                  fill=(255, 0, 0))  # 显示字
+        if counter == 109:
+            text_to_speech("采集结束", output_file)
+            playsound(output_file)
         # 转换回OpenCV格式
         image = cv2.cvtColor(np.asarray(img_PIL), cv2.COLOR_RGB2BGR)
         counter += 1
-    if (counter >= 113 and counter <117 and error != 1):
+    if (counter >= 113 and counter < 117 and error != 1):
         img_PIL = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
         draw = ImageDraw.Draw(img_PIL)
-        draw.text((int(image.shape[1] / 2), 30), "等待训练中", font=ImageFont.truetype(r'../msyh.ttc', 40),fill=(255, 0, 0))  # 显示字
+        draw.text((int(image.shape[1] / 2), 30), "等待训练中", font=ImageFont.truetype(r'../msyh.ttc', 40),
+                  fill=(255, 0, 0))  # 显示字
+        if counter == 113:
+            text_to_speech("等待训练中", output_file)
+            playsound(output_file)
         # 转换回OpenCV格式
         image = cv2.cvtColor(np.asarray(img_PIL), cv2.COLOR_RGB2BGR)
         counter += 1
-    if (counter==117 and error != 1):
+    if (counter == 117 and error != 1):
         faceutil.save_embeddings(image_paths, output_encoding_file_path)
         counter += 1
-    if (counter >117 and error != 1):
+    if (counter > 117 and error != 1):
         img_PIL = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
         draw = ImageDraw.Draw(img_PIL)
-        draw.text((int(image.shape[1] / 2), 30), "训练完成", font=ImageFont.truetype(r'../msyh.ttc', 40),fill=(255, 0, 0))  # 显示字
+        draw.text((int(image.shape[1] / 2), 30), "训练完成", font=ImageFont.truetype(r'../msyh.ttc', 40),
+                  fill=(255, 0, 0))  # 显示字
+        if counter == 118:
+            text_to_speech("训练完成", output_file)
+            playsound(output_file)
         # 转换回OpenCV格式
         image = cv2.cvtColor(np.asarray(img_PIL), cv2.COLOR_RGB2BGR)
         counter += 1

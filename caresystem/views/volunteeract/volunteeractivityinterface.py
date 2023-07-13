@@ -20,12 +20,15 @@ VIDEO_HEIGHT = 480
 ACTUAL_DISTANCE_LIMIT = 100  # cm
 
 # 得到 ID->姓名的map 、 ID->职位类型的map
-id_card_to_name, id_card_to_type = fileassistant.get_people_info(
-    people_info_path)
+id_card_to_name, id_card_to_type = fileassistant.get_people_info(people_info_path)
 faceutil = FaceUtil(model_path)
-
+insert = 0
+activity_timing = 0
+activity_start_time=0
+activity_limit_time=1
 
 def volunteeractivity(grabbed, frame):
+    global insert,activity_limit_time,activity_timing,activity_start_time
     if not grabbed:
         return
     frame = imutils.resize(frame,
@@ -92,8 +95,7 @@ def volunteeractivity(grabbed, frame):
         draw = ImageDraw.Draw(img_PIL)
         final_label = id_card_to_name[name]
         draw.text((left, top - 30), final_label,
-                  font=ImageFont.truetype('NotoSansCJK-Black.ttc',
-                                          40), fill=(255, 0, 0))  # linux
+                  font=ImageFont.truetype(r'msyh.ttc', 40), fill=(255, 0, 0))  # linux
         # 转换回OpenCV格式
         frame = cv2.cvtColor(np.asarray(img_PIL), cv2.COLOR_RGB2BGR)
 
@@ -114,11 +116,24 @@ def volunteeractivity(grabbed, frame):
                             cv2.FONT_HERSHEY_SIMPLEX, 0.5,
                             (0, 0, 255), 2)
 
-                current_time = time.strftime('%Y-%m-%d %H:%M:%S',
-                                             time.localtime(time.time()))
-                print('[EVENT] %s, 房间桌子, %s 正在与义工交互.'
-                      % (current_time,
-                         id_card_to_name[old_people_name[j_index]]))
+                if activity_timing == 0:  # just start timing
+                    activity_timing = 1
+                    activity_start_time = time.time()
+                else:  # already started timing
+                    activity_end_time = time.time()
+                    difference = activity_end_time - activity_start_time
+                current_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
+                if difference < activity_limit_time:
+                    print("忽略")
+                else:  # he/she is really smiling
+                    # insert into database
+                    if (insert == 0):
+                        # 插入数据库
+                        print("交互")
+                        insert = 1
+            else:
+                insert = 0
+                activity_timing = 0
 
     # show our detected faces along with smiling/not smiling labels
     return frame

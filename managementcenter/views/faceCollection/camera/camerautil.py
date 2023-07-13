@@ -3,7 +3,7 @@
 import cv2
 import threading
 
-from managementcenter.views.faceCollection.collectingfaceinterface import collectingfaces
+from managementcenter.views.faceCollection.collectingfacesinterface import collectingfaces
 from managementcenter.views.faceCollection.facial import FaceUtil
 i=0
 
