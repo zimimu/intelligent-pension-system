@@ -8,4 +8,5 @@ class event_info(models.Model):
     event_type = models.CharField(max_length=50)
     event_date = models.DateTimeField()
     event_desc = models.CharField(max_length=200)
-    oldperson_id = models.IntegerField()
+    event_place = models.CharField(max_length=50, null=True)
+    oldperson_id = models.IntegerField(null=True)

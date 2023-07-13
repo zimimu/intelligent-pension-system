@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.http import JsonResponse, StreamingHttpResponse
-
+from multiprocessing import Pool
 from managementcenter.views import oldManage,employeeManage,volunteerManage
 from managementcenter.views.faceCollection import startingcameraservice
 

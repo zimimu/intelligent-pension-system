@@ -23,11 +23,11 @@ def get_now_time():
     now = datetime.datetime.strptime(now_time, '%Y-%m-%d %H:%M:%S')
     return now
 
-def addEvent(oldPersonId, event_type, event_desc):
+def addEvent(oldPersonId, event_type, event_desc,event_place):
     now = get_now_time()
     try:
         event = models.event_info(oldperson_id=oldPersonId, event_desc=event_desc,
-                                  event_type=event_type,event_date=now)
+                                  event_type=event_type, event_date=now, event_place=event_place)
         event.save()
     except:
         return {'msg': '服务器错误，请重试', "code": '500'}

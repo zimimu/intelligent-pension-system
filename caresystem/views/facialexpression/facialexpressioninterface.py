@@ -5,6 +5,7 @@ from PIL import Image, ImageDraw, ImageFont
 from caresystem.views.oldcare.utils import fileassistant
 from keras.models import load_model
 from keras.preprocessing.image import image_utils
+from caresystem.views import dataManage
 import cv2
 import time
 import numpy as np
@@ -110,6 +111,7 @@ def checkingstrangersandfacialexpression(grabbed, frame):
                     event_location = '房间'
                     print('[EVENT] %s, 房间, 陌生人出现!!!'
                           % (current_time))
+                    dataManage.addEvent(None, "陌生人", current_time+"房间, 陌生人出现!!!", "room 1")
                     cv2.imwrite(
                         os.path.join(output_stranger_path, 'snapshot_%s.jpg' % (time.strftime('%Y%m%d_%H%M%S'))), frame)
                     # insert into database
@@ -163,6 +165,7 @@ def checkingstrangersandfacialexpression(grabbed, frame):
                     event_desc = '%s正在笑' % (id_card_to_name[name])
                     event_location = '房间'
                     print('[EVENT] %s, 房间, %s正在笑.' % (current_time, id_card_to_name[name]))
+                    dataManage.addEvent(id, "情绪", current_time+","+id_card_to_name[name]+"正在笑.", "房间")
                     cv2.imwrite(os.path.join(output_smile_path, 'snapshot_%s.jpg' % (time.strftime('%Y%m%d_%H%M%S'))),
                                 frame)
                     # insert into database
