@@ -11,6 +11,7 @@ from caresystem.views.falldetection import startingcameraservice
 from caresystem.views.fencein import startingcameraservice
 from caresystem.views.volunteeract import startingcameraservice
 from caresystem.views.firedetection import startingcameraservice
+from caresystem.views.violencedetection import startingcameraservice
 
 def test01(request):
     result = dataManage.addEvent(2,"互动","与护工哈哈进行互动")
@@ -35,3 +36,6 @@ def getVolunteeractStream(request):
 
 def getFiredetectionStream(request):
     return StreamingHttpResponse(caresystem.views.firedetection.startingcameraservice.video_stream(),content_type='multipart/x-mixed-replace; boundary=frame')
+
+def getViolenceStream(request):
+    return StreamingHttpResponse(caresystem.views.violencedetection.startingcameraservice.video_stream(),content_type='multipart/x-mixed-replace; boundary=frame')

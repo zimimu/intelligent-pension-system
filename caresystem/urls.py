@@ -10,4 +10,6 @@ urlpatterns = [
     path('getFenceinStream/', care_views.getFenceinStream),
     path('getVolunteeractStream/', care_views.getVolunteeractStream),
     path('getFiredetectionStream/', care_views.getFiredetectionStream),
+    path('getViolenceStream/', care_views.getViolenceStream)
+
 ]
