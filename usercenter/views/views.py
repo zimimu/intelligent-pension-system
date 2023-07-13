@@ -112,6 +112,14 @@ def getuser(request):
     else:
         return JsonResponse({'msg': '请输入id', "code": '205'},safe=False)
 
+# 获取管理员数量
+def getUserNum(request):
+    try:
+        user_list = models.user.objects.all()
+    except:
+        return JsonResponse({'msg': '记录不存在', 'code': '404'}, safe=False)
+    usernum = len(user_list)
+    return JsonResponse({'msg': '获取成功', 'code':'200', 'usernum': usernum}, safe=False)
 
 
 

@@ -141,6 +141,16 @@ def get_guardian_phone(request):
     phone = res.get("firstguardianphone")
     return {'msg': '获取成功', "code": '200', 'phone': phone}
 
+# 获取老人数量
+def getOldNum(request):
+    try:
+        old_list = models.oldperson_info.objects.all()
+    except:
+        return {'msg': '不存在本信息', "code": '404'}
+    oldnum = len(old_list)
+    print(oldnum)
+    return {'msg':'获取成功','code': '200','oldnum': oldnum}
+
 # 老人年龄分布直方图
 def getOldAgeNum(request):
     # 取出old 里面的生日日期

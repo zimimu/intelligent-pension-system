@@ -93,7 +93,6 @@ def checkEmployeeById(request):
     else:
         return {'msg': '请输入id', "code": '205'}
 
-
 def getEmployeeList(request):
     try:
         employee_list = models.employee_info.objects.all()
@@ -103,3 +102,13 @@ def getEmployeeList(request):
     for i in employee_list:
         res.append(model_to_dict(i))
     return {'msg': '获取成功', 'code': '200', 'employeeList': res}
+
+# 获取工作人员数量
+def getEmployeeNum(request):
+    try:
+        employee_list = models.employee_info.objects.all()
+    except:
+        return {'msg': '不存在本信息', "code": '404'}
+    employeenum = len(employee_list)
+    print(employeenum)
+    return {'msg':'获取成功','code': '200','oldnum': employeenum}

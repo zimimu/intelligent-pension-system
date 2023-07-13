@@ -92,7 +92,6 @@ def checkVolunteerById(request):
     else:
         return {'msg': '请输入id', "code": '205'}
 
-
 def getVolunteerList(request):
     try:
         volunteer_list = models.volunteer_info.objects.all()
@@ -102,3 +101,13 @@ def getVolunteerList(request):
     for i in volunteer_list:
         res.append(model_to_dict(i))
     return {'msg': '获取成功', "code": '200', 'volunteerList': res}
+
+# 获取义工数量
+def getVolunteerNum(request):
+    try:
+        volunteer_list = models.volunteer_info.objects.all()
+    except:
+        return {'msg': '不存在本信息', "code": '404'}
+    volunteernum = len(volunteer_list)
+    print(volunteernum)
+    return {'msg':'获取成功','code': '200','oldnum': volunteernum}

@@ -7,5 +7,6 @@ urlpatterns = [
     path('changePW/', user_views.changePw),
     path('changeInfo/', user_views.changeUserInfo),
     path('addNewUser/', user_views.addNewUser),
-    path('getuser/', user_views.getuser)
+    path('getuser/', user_views.getuser),
+    path('getUserNum/', user_views.getUserNum)
 ]

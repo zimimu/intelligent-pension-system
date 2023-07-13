@@ -31,6 +31,16 @@ def getOldList(request):
     result = oldManage.getOldList(request)
     return JsonResponse(result, safe=False)
 
+# 获取老人数量
+def getOldNum(request):
+    result = oldManage.getOldNum(request)
+    return JsonResponse(result,safe=False)
+
+# 老人年龄分布直方图
+def getOldAgeNum(request):
+    result = oldManage.getOldAgeNum(request)
+    return JsonResponse(result,safe=False)
+
 # 添加工作人员信息
 def addEmployeeInfo(request):
     result = employeeManage.addEmployInfo(request)
@@ -54,6 +64,11 @@ def checkEmployeeById(request):
 # 获取工作人员列表
 def getEmployeeList(request):
     result = employeeManage.getEmployeeList(request)
+    return JsonResponse(result, safe=False)
+
+# 获取工作人员数量
+def getEmployeeNum(request):
+    result = employeeManage.getEmployeeNum(request)
     return JsonResponse(result, safe=False)
 
 # 新增义工
@@ -92,7 +107,8 @@ def getFaceCollectionStream(request):
     print(id)
     return StreamingHttpResponse(startingcameraservice.video_stream(id), content_type='multipart/x-mixed-replace; boundary=frame')
 
-# 老人年龄分布直方图
-def getOldAgeNum(request):
-    result = oldManage.getOldAgeNum(request)
-    return JsonResponse(result,safe=False)
+# 获取义工数量
+def getVolunteerNum(request):
+    result = volunteerManage.getVolunteerNum(request)
+    return JsonResponse(result, safe=False)
+
