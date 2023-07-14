@@ -7,8 +7,8 @@ from ultralytics import YOLO
 
 i = 0
 
-model = YOLO('E:/xxq/demo04/caresystem/views/models/best-violence.pt')
-
+# model = YOLO('E:/xxq/demo04/caresystem/views/models/best-violence.pt')
+model = YOLO('F:/SummerVacation2023/intelligent-pension-system/caresystem/views/models/best-violence.pt')
 
 class RecordingThread(threading.Thread):
     def __init__(self, name, camera, save_video_path):

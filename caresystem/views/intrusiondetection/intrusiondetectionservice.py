@@ -20,12 +20,17 @@ cap = cv2.VideoCapture(filepath)
 cap.set(6, cv2.VideoWriter.fourcc('M', 'J', 'P', 'G'))
 # cap.set(3, 480)
 # cap.set(4, 640)
+cap.set(3, 500)
+cap.set(4, 400)
 print(cap.get(5))
 
 x1=0
 y1=0
-x2 = int(cap.get(3))
-y2 = int(cap.get(4))
+# x2 = int(cap.get(3))
+# y2 = int(cap.get(4))
+x2 = 500
+y2 = 400
+print("x2，y2:")
 print(x2,y2)
 od = ObjectDetection()
 all_r=[]
@@ -44,9 +49,18 @@ all_r=[]
 class myThread(threading.Thread):
     def __init__(self,  img_height, img_width):
         super(myThread, self).__init__()
-        self.img_height = img_height
-        self.img_width = img_width
+        # self.img_height = img_height
+        # self.img_width = img_width
+        self.img_height = 500
+        self.img_width = 600
         self.frame = np.zeros((img_height, img_width, 3), dtype=np.uint8)
+
+    # def stop(self):
+    #     self.isRunning = False
+    #
+    # def __del__(self):
+    #     self.out.release()
+    #
 
     def run(self):
         global thread_exit
@@ -66,12 +80,16 @@ def deal_v():
     global q
     q=Queue()
     # camera_id ='rtmp://47.93.4.51:1935/live/stream'#"D:\Test_vedio\yb2.mp4"
-    img_height = int(cap.get(4))
-    img_width = int(cap.get(3))
+    # img_height = int(cap.get(4))
+    # img_width = int(cap.get(3))
+    img_height = 500
+    img_width = 600
     thread = myThread(img_height, img_width)
     thread.start()
-    w = int(cap.get(4))
-    h = int(cap.get(3))
+    # w = int(cap.get(4))
+    # h = int(cap.get(3))
+    w = 500
+    h = 400
     trackers_ = []
     labels = []
     stay=[]
@@ -93,9 +111,9 @@ def deal_v():
         b2 = y2
         img_origin = q.get()
         count += 1  # 记录当前是第几帧
-        print('------------------------')
-        print('NUM:', count)
-        print("画框")
+        # print('------------------------')
+        # print('NUM:', count)
+        # print("画框")
         if img_origin is None:
             break
         # （1）读取视频

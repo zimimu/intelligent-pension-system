@@ -32,9 +32,9 @@ image_paths = list(paths.list_images(dataset_path))
 output_file = 'managementcenter/views/faceCollection/voices/output.mp3'
 
 # 在百度AI平台创建应用获取以下信息
-APP_ID = '36107412'
-API_KEY = 'bSYejXnTAXfobnoAl2qYZGvE'
-SECRET_KEY = '6GhsKVXqbuYhifByATGTvGRkBGsddGHK'
+APP_ID = '36160094'
+API_KEY = 'gRSHCGOWWDtVKeGrA3n3NIwU'
+SECRET_KEY = 'xNvD1kaEuOpRxsxSGi817vGoTFzGQbF0'
 
 
 def text_to_speech(text, output_file):

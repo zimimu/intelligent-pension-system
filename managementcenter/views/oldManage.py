@@ -180,9 +180,9 @@ def getOldAgeNum(request):
         # print(birthday)
         temp.append(relativedelta(today, birthday))
         age.append(temp[i].years)
-        print("age:")
-        print(i)
-        print(age[i])
+        # print("age:")
+        # print(i)
+        # print(age[i])
     array = [0, 0, 0, 0]
     for i in range(0, len(age)):
         if age[i] <= 50:
