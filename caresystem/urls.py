@@ -14,5 +14,7 @@ urlpatterns = [
     path('getEmotionList/', care_views.getEmotionList),
     path('getIntrusionList/', care_views.getIntrusionList),
     path('getFallList/', care_views.getFallList),
-    path('getInteractList/', care_views.getInteractList)
+    path('getInteractList/', care_views.getInteractList),
+    # path('areaChoose/', care_views.areaChoose), # 入侵区域选择
+    path('getIntrusionStream/',care_views.getIntrusionStream), # 入侵检测
 ]
