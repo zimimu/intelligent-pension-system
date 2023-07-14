@@ -85,7 +85,7 @@ def collectingfaces(image, id, counter):
         else:
             pass
     # 新建目录
-    if (counter == 0 and error != 1):
+    if counter == 0 and error != 1:
         print(imagedir + '/' + str(id))
         print(os.path.exists(imagedir + '/' + str(id)))
         if os.path.exists(imagedir + '/' + str(id)):
@@ -93,7 +93,7 @@ def collectingfaces(image, id, counter):
         os.mkdir(imagedir + '/' + str(id))
         print('[Tips] 目录创建成功')
         counter += 1
-    if (counter <= 4 and error != 1):
+    if counter <= 4 and error != 1:
         img_PIL = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
         draw = ImageDraw.Draw(img_PIL)
         draw.text((int(image.shape[1] / 2), 30), "准备开始采集", font=ImageFont.truetype(r'../msyh.ttc', 40),
@@ -101,7 +101,7 @@ def collectingfaces(image, id, counter):
         # 转换回OpenCV格式
         image = cv2.cvtColor(np.asarray(img_PIL), cv2.COLOR_RGB2BGR)
         counter += 1
-    if (counter > 4 and counter < 109 and error != 1):
+    if 4 < counter < 109 and error != 1:
         action_name = action_map[action_list[(counter - 4) // 15]]
         if ((counter - 4) % 15) == 1:
             text_to_speech(action_name, output_file)
@@ -122,7 +122,7 @@ def collectingfaces(image, id, counter):
                                   action_list[(counter - 4) // 15] + '_' + str((counter - 4)) + '.jpg')
         cv2.imwrite(image_name, origin_img)  # 保存
         counter += 1
-    if (counter >= 109 and counter < 113 and error != 1):
+    if 109 <= counter < 113 and error != 1:
         img_PIL = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
         draw = ImageDraw.Draw(img_PIL)
         draw.text((int(image.shape[1] / 2), 30), "采集结束", font=ImageFont.truetype(r'../msyh.ttc', 40),
@@ -133,7 +133,7 @@ def collectingfaces(image, id, counter):
         # 转换回OpenCV格式
         image = cv2.cvtColor(np.asarray(img_PIL), cv2.COLOR_RGB2BGR)
         counter += 1
-    if (counter >= 113 and counter < 117 and error != 1):
+    if 113 <= counter < 117 and error != 1:
         img_PIL = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
         draw = ImageDraw.Draw(img_PIL)
         draw.text((int(image.shape[1] / 2), 30), "等待训练中", font=ImageFont.truetype(r'../msyh.ttc', 40),
@@ -144,10 +144,10 @@ def collectingfaces(image, id, counter):
         # 转换回OpenCV格式
         image = cv2.cvtColor(np.asarray(img_PIL), cv2.COLOR_RGB2BGR)
         counter += 1
-    if (counter == 117 and error != 1):
+    if counter == 117 and error != 1:
         faceutil.save_embeddings(image_paths, output_encoding_file_path)
         counter += 1
-    if (counter > 117 and error != 1):
+    if counter > 117 and error != 1:
         img_PIL = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
         draw = ImageDraw.Draw(img_PIL)
         draw.text((int(image.shape[1] / 2), 30), "训练完成", font=ImageFont.truetype(r'../msyh.ttc', 40),

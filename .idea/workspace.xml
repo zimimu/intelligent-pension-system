@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50dc8842-915a-42a8-acde-b328cca1eb7a" name="Changes" comment="人脸录入语音&#10;增加添加数据库">
+    <list default="true" id="50dc8842-915a-42a8-acde-b328cca1eb7a" name="Changes" comment="人脸录入关闭">
+      <change afterPath="$PROJECT_DIR$/caresystem/views/intrusiondetection/intrusiondetection/intrusiondetectionservice.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/caresystem/views/intrusiondetection/intrusiondetection/object_detection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/caresystem/views/intrusiondetection/intrusiondetection/startingcameraservice.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/managementcenter/views/faceCollection/camera/camerautil.py" beforeDir="false" afterPath="$PROJECT_DIR$/managementcenter/views/faceCollection/camera/camerautil.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/managementcenter/views/faceCollection/collectingfacesinterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/managementcenter/views/faceCollection/collectingfacesinterface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/managementcenter/views/faceCollection/startingcameraservice.py" beforeDir="false" afterPath="$PROJECT_DIR$/managementcenter/views/faceCollection/startingcameraservice.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,27 +93,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/xxq/demo04/managementcenter/views&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/xxq/demo04/caresystem/views",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\xxq\demo04\caresystem\views\models" />
+      <recent name="E:\xxq\demo04\caresystem\views" />
       <recent name="E:\xxq\demo04\managementcenter\views" />
       <recent name="E:\xxq\demo04\managementcenter\views\faceCollection\voices" />
       <recent name="E:\xxq\demo04\caresystem\views\volunteeract" />
-      <recent name="E:\xxq\demo04\caresystem\views\facialexpression" />
-      <recent name="E:\xxq\demo04\caresystem\views\falldetection" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\xxq\demo09" />
@@ -183,6 +191,9 @@
       <workItem from="1689220903415" duration="297000" />
       <workItem from="1689228983746" duration="7262000" />
       <workItem from="1689237163255" duration="838000" />
+      <workItem from="1689239150286" duration="584000" />
+      <workItem from="1689240059883" duration="89000" />
+      <workItem from="1689299066534" duration="629000" />
     </task>
     <task id="LOCAL-00001" summary="整合跌倒检测，入侵检测，交互检测，情感分析">
       <created>1688925723348</created>
@@ -240,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689236234510</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="人脸录入关闭">
+      <created>1689239354508</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1689239354508</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,7 +284,8 @@
     <MESSAGE value="打架检测" />
     <MESSAGE value="人脸模型训练（会卡&#10;两个红框bug" />
     <MESSAGE value="人脸录入语音&#10;增加添加数据库" />
-    <option name="LAST_COMMIT_MESSAGE" value="人脸录入语音&#10;增加添加数据库" />
+    <MESSAGE value="人脸录入关闭" />
+    <option name="LAST_COMMIT_MESSAGE" value="人脸录入关闭" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
