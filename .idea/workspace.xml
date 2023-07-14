@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50dc8842-915a-42a8-acde-b328cca1eb7a" name="Changes" comment="yolov4入侵检测">
+    <list default="true" id="50dc8842-915a-42a8-acde-b328cca1eb7a" name="Changes" comment="yolov4入侵检测 weight权重文件">
+      <change afterPath="$PROJECT_DIR$/caresystem/views/models/dnn_model/.gitattributes" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/caresystem/views/models/dnn_model/yolov4.weights" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +156,7 @@
       <workItem from="1689064004477" duration="2284000" />
       <workItem from="1689067748020" duration="140000" />
       <workItem from="1689132612276" duration="6932000" />
-      <workItem from="1689300662643" duration="790000" />
+      <workItem from="1689300662643" duration="1095000" />
     </task>
     <task id="LOCAL-00001" summary="整合跌倒检测，入侵检测，交互检测，情感分析">
       <created>1688925723348</created>
@@ -284,7 +286,8 @@
     <MESSAGE value="yolov4入侵检测模型-txt文件" />
     <MESSAGE value="yolov4入侵检测模型-cfg文件" />
     <MESSAGE value="yolov4入侵检测" />
-    <option name="LAST_COMMIT_MESSAGE" value="yolov4入侵检测" />
+    <MESSAGE value="yolov4入侵检测 weight权重文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="yolov4入侵检测 weight权重文件" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
