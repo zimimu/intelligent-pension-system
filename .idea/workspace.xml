@@ -7,7 +7,16 @@
     <list default="true" id="50dc8842-915a-42a8-acde-b328cca1eb7a" name="Changes" comment="yolov4入侵检测 weight权重文件">
       <change afterPath="$PROJECT_DIR$/caresystem/views/models/dnn_model/.gitattributes" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/caresystem/views/models/dnn_model/yolov4.weights" afterDir="false" />
+    <list default="true" id="50dc8842-915a-42a8-acde-b328cca1eb7a" name="Changes" comment="人脸录入关闭">
+      <change afterPath="$PROJECT_DIR$/caresystem/views/intrusiondetection/intrusiondetection/intrusiondetectionservice.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/caresystem/views/intrusiondetection/intrusiondetection/object_detection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/caresystem/views/intrusiondetection/intrusiondetection/startingcameraservice.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/managementcenter/views/faceCollection/camera/camerautil.py" beforeDir="false" afterPath="$PROJECT_DIR$/managementcenter/views/faceCollection/camera/camerautil.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/managementcenter/views/faceCollection/collectingfacesinterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/managementcenter/views/faceCollection/collectingfacesinterface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/managementcenter/views/faceCollection/startingcameraservice.py" beforeDir="false" afterPath="$PROJECT_DIR$/managementcenter/views/faceCollection/startingcameraservice.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +45,47 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin-ll" />
+              </list>
+            </value>
+          </entry>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/origin-ll" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
+    {
+      &quot;state&quot;: &quot;MERGED&quot;,
+      &quot;author&quot;: &quot;zimimu&quot;
+    }
+  ],
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;MERGED&quot;,
+    &quot;author&quot;: &quot;zimimu&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="2ac32e0c-4478-47da-8897-8cc99fb289c9" />
+        <option name="url" value="git@github.com:zimimu/intelligent-pension-system.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -56,6 +105,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "F:/SummerVacation2023/intelligent-pension-system/caresystem/views/models",
+    "last_opened_file_path": "E:/xxq/demo04/caresystem/views",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -70,6 +120,10 @@
       <recent name="F:\SummerVacation2023\intelligent-pension-system\caresystem\views" />
       <recent name="E:\xxq\demo04\caresystem\views\firedetection" />
       <recent name="E:\xxq\demo04\caresystem\views\models" />
+      <recent name="E:\xxq\demo04\caresystem\views" />
+      <recent name="E:\xxq\demo04\managementcenter\views" />
+      <recent name="E:\xxq\demo04\managementcenter\views\faceCollection\voices" />
+      <recent name="E:\xxq\demo04\caresystem\views\volunteeract" />
       <recent name="E:\xxq\demo09\caresystem\views\volunteeract" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -89,12 +143,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/caresystem/views/falldetection" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/managementcenter/views/faceCollection" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/caresystem/views/falldetection/startingcameraservice.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/managementcenter/views/faceCollection/startingcameraservice.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -157,6 +211,13 @@
       <workItem from="1689067748020" duration="140000" />
       <workItem from="1689132612276" duration="6932000" />
       <workItem from="1689300662643" duration="1095000" />
+      <workItem from="1689212079099" duration="6570000" />
+      <workItem from="1689220903415" duration="297000" />
+      <workItem from="1689228983746" duration="7262000" />
+      <workItem from="1689237163255" duration="838000" />
+      <workItem from="1689239150286" duration="584000" />
+      <workItem from="1689240059883" duration="89000" />
+      <workItem from="1689299066534" duration="629000" />
     </task>
     <task id="LOCAL-00001" summary="整合跌倒检测，入侵检测，交互检测，情感分析">
       <created>1688925723348</created>
@@ -229,6 +290,42 @@
       <updated>1689301261698</updated>
     </task>
     <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00005" summary="火灾检测修改">
+      <created>1689148567154</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1689148567154</updated>
+    </task>
+    <task id="LOCAL-00006" summary="打架检测">
+      <created>1689214890919</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1689214890919</updated>
+    </task>
+    <task id="LOCAL-00007" summary="人脸模型训练（会卡&#10;两个红框bug">
+      <created>1689221118633</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1689221118633</updated>
+    </task>
+    <task id="LOCAL-00008" summary="人脸录入语音&#10;增加添加数据库">
+      <created>1689236234510</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1689236234510</updated>
+    </task>
+    <task id="LOCAL-00009" summary="人脸录入关闭">
+      <created>1689239354508</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1689239354508</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,6 +375,12 @@
     <MESSAGE value="火灾检测" />
     <MESSAGE value="bug修改" />
     <MESSAGE value="路径修改" />
+    <MESSAGE value="火灾检测修改" />
+    <MESSAGE value="打架检测" />
+    <MESSAGE value="人脸模型训练（会卡&#10;两个红框bug" />
+    <MESSAGE value="人脸录入语音&#10;增加添加数据库" />
+    <MESSAGE value="人脸录入关闭" />
+    <option name="LAST_COMMIT_MESSAGE" value="人脸录入关闭" />
     <MESSAGE value="修了个小错" />
     <MESSAGE value="删除没用文件" />
     <MESSAGE value="eighth commit 添加停止功能" />
@@ -291,6 +394,8 @@
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/demo04$startingcameraservice.coverage" NAME="startingcameraservice Coverage Results" MODIFIED="1689233481436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/managementcenter/views/faceCollection" />
+    <SUITE FILE_PATH="coverage/demo04$manage.coverage" NAME="manage Coverage Results" MODIFIED="1688959290483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/demo04$manage.coverage" NAME="manage Coverage Results" MODIFIED="1688959290483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/demo04$startingcameraservice.coverage" NAME="startingcameraservice Coverage Results" MODIFIED="1688954280524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/caresystem/views/falldetection" />
   </component>

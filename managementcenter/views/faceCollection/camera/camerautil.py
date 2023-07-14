@@ -3,10 +3,10 @@
 import cv2
 import threading
 
-from managementcenter.views.faceCollection.collectingfaceinterface import collectingfaces
+from managementcenter.views.faceCollection.collectingfacesinterface import collectingfaces
 from managementcenter.views.faceCollection.facial import FaceUtil
-i=0
 
+i = 0
 
 
 class VideoCamera(object):
@@ -24,7 +24,7 @@ class VideoCamera(object):
     def __del__(self):
         self.cap.release()
 
-    def get_frame(self,id):
+    def get_frame(self, id):
         print("get_frame函数被调用，获取的id是：")
         print(id)
         global i
@@ -32,16 +32,11 @@ class VideoCamera(object):
 
         if ret:
             frame = cv2.flip(frame, 1)
-            #frame=checkingstrangersandfacialexpression(ret, frame)
-            #frame,i=falldetection(ret, frame,i)
-            #frame=volunteeractivity(ret,frame)
-            #frame=checkingfence(frame)
-            frame,i=collectingfaces(frame,id,i)
+            frame, i = collectingfaces(frame, id, i)
             ret, jpeg = cv2.imencode('.jpg', frame)
-            if (i // 15 > 7):
+            if i == 119:
                 self.cap.release()
             return jpeg.tobytes()
 
         else:
             return None
-

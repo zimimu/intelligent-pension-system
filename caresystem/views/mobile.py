@@ -11,7 +11,7 @@ def sendMobile_test(id, content):
     mobile = json.loads(phoneRes).get("phone")
 
     # 接口地址
-    url = 'http://106.ihuyi.com/webservice/sms.php?method=Submit'
+    url = 'https://106.ihuyi.com/webservice/sms.php?method=Submit'
 
     # 定义请求的数据
     values = {

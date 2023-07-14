@@ -12,6 +12,8 @@ from caresystem.views.fencein import startingcameraservice
 from caresystem.views.volunteeract import startingcameraservice
 from caresystem.views.firedetection import startingcameraservice
 from caresystem.views.intrusiondetection import intrusiondetectionservice
+from caresystem.views.violencedetection import startingcameraservice
+from caresystem.views.intrusiondetection import intrusiondetectionservice
 
 def test01(request):
     result = dataManage.addEvent(2,"互动","与护工哈哈进行互动")
@@ -37,6 +39,9 @@ def getVolunteeractStream(request):
 def getFiredetectionStream(request):
     return StreamingHttpResponse(caresystem.views.firedetection.startingcameraservice.video_stream(),content_type='multipart/x-mixed-replace; boundary=frame')
 
+def getViolenceStream(request):
+    return StreamingHttpResponse(caresystem.views.violencedetection.startingcameraservice.video_stream(),content_type='multipart/x-mixed-replace; boundary=frame')
+
 # 获取入侵检测视频流
 def getIntrusionStream(request):
     return StreamingHttpResponse(caresystem.views.intrusiondetection.intrusiondetectionservice.deal_v(),content_type='multipart/x-mixed-replace; boundary=frame')
@@ -56,3 +61,4 @@ def getIntrusionList(request):
 def getInteractList(request):
     result = dataManage.getInteractEvent(request)
     return JsonResponse(result, safe=False)
+

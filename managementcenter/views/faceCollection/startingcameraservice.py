@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-'''
+"""
 启动摄像头主程序
 
 用法:
@@ -10,14 +10,13 @@ python startingcameraservice.py --location room
 直接执行即可启动摄像头，浏览器访问 http://192.168.1.156:5001/ 即可看到
 摄像头实时画面
 
-'''
-import argparse
+"""
 
 from managementcenter.views.faceCollection.camera import VideoCamera
 
-
 video_camera = None
 global_frame = None
+
 
 def video_stream(id):
     print("video_stream函数被调用，获取的id是：")
@@ -39,5 +38,3 @@ def video_stream(id):
             yield (b'--frame\r\n'
                    b'Content-Type: image/jpeg\r\n\r\n'
                    + global_frame + b'\r\n\r\n')
-
-
