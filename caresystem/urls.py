@@ -21,4 +21,8 @@ urlpatterns = [
     # path('areaChoose/', care_views.areaChoose), # 入侵区域选择
     path('getIntrusionStream/', care_views.getIntrusionStream),  # 入侵检测
 
+    path('getInteractList/', care_views.getInteractList),
+    path('changeEventStatus/', care_views.changeEventStatus),
+    path('getChatContent/', care_views.getChatResult),
+    path('addNewCall/', care_views.addCallEvent)
 ]

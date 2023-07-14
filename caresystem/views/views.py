@@ -14,6 +14,7 @@ from caresystem.views.firedetection import startingcameraservice
 from caresystem.views.intrusiondetection import intrusiondetectionservice
 from caresystem.views.violencedetection import startingcameraservice
 from caresystem.views.intrusiondetection import intrusiondetectionservice
+from caresystem.views.voiceChat import chatgpt
 
 def test01(request):
     result = dataManage.addEvent(2,"互动","与护工哈哈进行互动")
@@ -60,5 +61,17 @@ def getIntrusionList(request):
 
 def getInteractList(request):
     result = dataManage.getInteractEvent(request)
+    return JsonResponse(result, safe=False)
+
+def changeEventStatus(request):
+    result = dataManage.changeEventStatus(request)
+    return JsonResponse(result, safe=False)
+
+def getChatResult(request):
+    result = chatgpt.ChatGPT(request)
+    return JsonResponse(result, safe=False)
+
+def addCallEvent(request):
+    result = dataManage.addNewCall(request)
     return JsonResponse(result, safe=False)
 

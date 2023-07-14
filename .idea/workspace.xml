@@ -18,6 +18,15 @@
       <change beforePath="$PROJECT_DIR$/managementcenter/views/faceCollection/collectingfacesinterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/managementcenter/views/faceCollection/collectingfacesinterface.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/managementcenter/views/faceCollection/startingcameraservice.py" beforeDir="false" afterPath="$PROJECT_DIR$/managementcenter/views/faceCollection/startingcameraservice.py" afterDir="false" />
     </list>
+    <list default="true" id="50dc8842-915a-42a8-acde-b328cca1eb7a" name="Changes" comment="tenth commit 修改event表">
+      <change afterPath="$PROJECT_DIR$/caresystem/views/voiceChat/chatgpt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/dataManage.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/dataManage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caresystem/views/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/caresystem/views/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/intelligentPessionSystem/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/intelligentPessionSystem/settings.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -209,6 +218,14 @@
       <workItem from="1689057560537" duration="2010000" />
       <workItem from="1689064004477" duration="2284000" />
       <workItem from="1689067748020" duration="140000" />
+      <workItem from="1689132612276" duration="7513000" />
+      <workItem from="1689153047231" duration="54000" />
+      <workItem from="1689172800343" duration="1189000" />
+      <workItem from="1689216122978" duration="6303000" />
+      <workItem from="1689236393392" duration="3576000" />
+      <workItem from="1689256090767" duration="5066000" />
+      <workItem from="1689298308980" duration="2995000" />
+      <workItem from="1689318272962" duration="5614000" />
       <workItem from="1689132612276" duration="6932000" />
       <workItem from="1689300662643" duration="1095000" />
       <workItem from="1689212079099" duration="6570000" />
@@ -262,69 +279,19 @@
       <option name="project" value="LOCAL" />
       <updated>1689150168512</updated>
     </task>
-    <task id="LOCAL-00008" summary="yolov4入侵检测算法代码">
-      <created>1689300973491</created>
+    <task id="LOCAL-00008" summary="ninth commit 添加redis查询">
+      <created>1689152434753</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1689300973491</updated>
+      <updated>1689152434753</updated>
     </task>
-    <task id="LOCAL-00009" summary="yolov4入侵检测模型-txt文件">
-      <created>1689301036342</created>
+    <task id="LOCAL-00009" summary="tenth commit 修改event表">
+      <created>1689231602029</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1689301036342</updated>
-    </task>
-    <task id="LOCAL-00010" summary="yolov4入侵检测模型-cfg文件">
-      <created>1689301138056</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1689301138056</updated>
-    </task>
-    <task id="LOCAL-00011" summary="yolov4入侵检测">
-      <created>1689301261698</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1689301261698</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
-    <task id="LOCAL-00005" summary="火灾检测修改">
-      <created>1689148567154</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1689148567154</updated>
-    </task>
-    <task id="LOCAL-00006" summary="打架检测">
-      <created>1689214890919</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1689214890919</updated>
-    </task>
-    <task id="LOCAL-00007" summary="人脸模型训练（会卡&#10;两个红框bug">
-      <created>1689221118633</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1689221118633</updated>
-    </task>
-    <task id="LOCAL-00008" summary="人脸录入语音&#10;增加添加数据库">
-      <created>1689236234510</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1689236234510</updated>
-    </task>
-    <task id="LOCAL-00009" summary="人脸录入关闭">
-      <created>1689239354508</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1689239354508</updated>
+      <updated>1689231602029</updated>
     </task>
     <option name="localTasksCounter" value="10" />
     <servers />
@@ -343,7 +310,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin-ll" />
+                        <option value="origin/origin-wxy" />
                       </list>
                     </value>
                   </entry>
@@ -386,6 +353,8 @@
     <MESSAGE value="删除没用文件" />
     <MESSAGE value="eighth commit 添加停止功能" />
     <MESSAGE value="ninth commit 添加redis查询" />
+    <MESSAGE value="tenth commit 修改event表" />
+    <option name="LAST_COMMIT_MESSAGE" value="tenth commit 修改event表" />
     <MESSAGE value="yolov4入侵检测算法代码" />
     <MESSAGE value="yolov4入侵检测模型-txt文件" />
     <MESSAGE value="yolov4入侵检测模型-cfg文件" />
