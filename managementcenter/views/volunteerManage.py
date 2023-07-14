@@ -110,4 +110,4 @@ def getVolunteerNum(request):
         return {'msg': '不存在本信息', "code": '404'}
     volunteernum = len(volunteer_list)
     print(volunteernum)
-    return {'msg':'获取成功','code': '200','oldnum': volunteernum}
+    return {'msg':'获取成功','code': '200','volunteernum': volunteernum}

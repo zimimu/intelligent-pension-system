@@ -111,4 +111,4 @@ def getEmployeeNum(request):
         return {'msg': '不存在本信息', "code": '404'}
     employeenum = len(employee_list)
     print(employeenum)
-    return {'msg':'获取成功','code': '200','oldnum': employeenum}
+    return {'msg':'获取成功','code': '200','employeenum': employeenum}
