@@ -10,3 +10,4 @@ class event_info(models.Model):
     event_desc = models.CharField(max_length=200)
     event_place = models.CharField(max_length=50, null=True)
     oldperson_id = models.IntegerField(null=True)
+    status = models.IntegerField()

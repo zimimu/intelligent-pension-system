@@ -27,7 +27,7 @@ def addEvent(oldPersonId, event_type, event_desc,event_place):
     now = get_now_time()
     try:
         event = models.event_info(oldperson_id=oldPersonId, event_desc=event_desc,
-                                  event_type=event_type, event_date=now, event_place=event_place)
+                                  event_type=event_type, event_date=now, event_place=event_place, status=0)
         event.save()
     except:
         return {'msg': '服务器错误，请重试', "code": '500'}
@@ -96,4 +96,40 @@ def getEventInfo(request):
     res = []
     for i in event_list:
         res.append(model_to_dict(i))
-    return {'msg': '获取成功', "code": '200', 'oldList': res}
+    return {'msg': '获取成功', "code": '200', 'eventList': res}
+
+def changeEventStatus(request):
+    # 得到的是一个二进制数据
+    json_str = request.body
+    # 对二进制数据进行解码,解码得到json数据
+    json_str = json_str.decode()
+    # 将json数据转化成字典形式
+    json_data = json.loads(json_str)
+    print(json_data)
+
+    id = json_data["id"]
+    try:
+        models.event_info.objects.filter(ID=id).update(status=1)
+    except:
+        return {'msg': '服务器错误，请重试', "code": '500'}
+
+    return {'msg': '更新成功', "code": '200'}
+
+def addNewCall(request):
+    # 得到的是一个二进制数据
+    json_str = request.body
+    # 对二进制数据进行解码,解码得到json数据
+    json_str = json_str.decode()
+    # 将json数据转化成字典形式
+    json_data = json.loads(json_str)
+    print(json_data)
+    now = get_now_time()
+    try:
+        event = models.event_info(oldperson_id=json_data["oldId"], event_desc="房间号为"+json_data["roomNum"]+"的老人进行呼叫",
+                                  event_type="呼叫", event_date=now, event_place=json_data["roomNum"], status=0)
+        event.save()
+    except:
+        return {'msg': '服务器错误，请重试', "code": '500'}
+
+    return {'msg': '添加成功', "code": '200'}
+

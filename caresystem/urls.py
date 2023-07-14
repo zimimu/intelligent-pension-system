@@ -12,5 +12,8 @@ urlpatterns = [
     path('getEmotionList/', care_views.getEmotionList),
     path('getIntrusionList/', care_views.getIntrusionList),
     path('getFallList/', care_views.getFallList),
-    path('getInteractList/', care_views.getInteractList)
+    path('getInteractList/', care_views.getInteractList),
+    path('changeEventStatus/', care_views.changeEventStatus),
+    path('getChatContent/', care_views.getChatResult),
+    path('addNewCall/', care_views.addCallEvent)
 ]
