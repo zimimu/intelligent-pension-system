@@ -6,6 +6,7 @@ import numpy as np
 import cv2
 from multiprocessing import Queue
 import threading
+from caresystem.views.dataManage import addEvent # 往事件数据库里面加数据
 # from copy import deepcopy
 
 # import pymssql
@@ -55,8 +56,8 @@ class myThread(threading.Thread):
         self.img_width = 600
         self.frame = np.zeros((img_height, img_width, 3), dtype=np.uint8)
 
-    def stop(self):
-        thread_exit = False
+    # def stop(self):
+    #     thread_exit = True
     #
     # def __del__(self):
     #     self.out.release()
@@ -76,7 +77,9 @@ class myThread(threading.Thread):
         cap.release()
 
 def deal_v():
-    global thread_exit
+    addEvent("", "入侵", "yolov4", "房间")  # 存入
+    print("存入addEvent()")
+    global thread_exit # 退出
     global q
     q=Queue()
     # camera_id ='rtmp://47.93.4.51:1935/live/stream'#"D:\Test_vedio\yb2.mp4"
@@ -104,6 +107,7 @@ def deal_v():
     center_tracker = []  # 追踪器的中心点
 
     while True:
+    # while (thread_exit != True):
         # thread_lock.acquire()
         a1 = x1
         b1 = y1
@@ -127,7 +131,8 @@ def deal_v():
             print("识别")
             # （4）目标检测
             class_ids, scores, boxes = od.detect(img)
-            print(class_ids)
+            # print(class_ids)
+
             if len(boxes)==0:
                 trackers_.clear()
                 labels.clear()
@@ -200,7 +205,6 @@ def deal_v():
                 cv2.rectangle(img, (startX, startY), (endX, endY), (0, 255, 0), 2)
                 cv2.putText(img, str(id), (t_cx, t_cy), 0, 1, (0, 0, 255), 2)
 
-
         if box_len == 0 and len(now) > 0:
             vedio_tag = 1
             if len(labels) == 0:
@@ -213,7 +217,11 @@ def deal_v():
                 './record_vedio/' + str(start_time.day) + str(start_time.hour) + str(start_time.minute) + str(
                     start_time.second) + '.avi', cv2.VideoWriter_fourcc(*'XVID'), 20,
                 (640, 480))
+
         if box_len == 0 and len(now) == 0:  # 入侵结束
+            # thread_exit = True
+            addEvent("", "入侵", "yolov4", "房间") # 存入
+            # print("存入addEvent")
             if len(labels) > 0 and vedio_tag == 1:
                 end_id = labels[len(labels) - 1]
                 print("结束" + str(end_id))
@@ -231,7 +239,7 @@ def deal_v():
         yield (b'--frame\r\n'
                b'Content-Type: text/plain\r\n\r\n' + stringData + b'\r\n')
         if vedio_tag == 1:
-            print("存入")
+            # print("存入")
             out.write(cv2.resize(img_origin, (640, 480), interpolation=cv2.INTER_AREA))
 
 

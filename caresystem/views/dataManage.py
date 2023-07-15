@@ -33,7 +33,7 @@ def addEvent(oldPersonId, event_type, event_desc,event_place):
         event.save()
     except:
         return {'msg': '服务器错误，请重试', "code": '500'}
-
+    print("addEvent 被调用")
     return {'msg': '添加成功', "code": '200'}
 
 
