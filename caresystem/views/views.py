@@ -63,6 +63,14 @@ def getInteractList(request):
     result = dataManage.getInteractEvent(request)
     return JsonResponse(result, safe=False)
 
+def getFireList(request):
+    result =  dataManage.getFireEvent(request)
+    return JsonResponse(result, safe=False)
+
+def getViolenceList(request):
+    result = dataManage.getViolenceEvent(request)
+    return JsonResponse(result, safe=False)
+
 def changeEventStatus(request):
     result = dataManage.changeEventStatus(request)
     return JsonResponse(result, safe=False)

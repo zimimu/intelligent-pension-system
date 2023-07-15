@@ -36,7 +36,6 @@ def addEvent(oldPersonId, event_type, event_desc,event_place):
     print("addEvent 被调用")
     return {'msg': '添加成功', "code": '200'}
 
-
 def getEmotionEvent(request):
     emotionList = cache.get('emotion_list')
     if not emotionList:
@@ -76,7 +75,6 @@ def getFallEvent(request):
         res.append(model_to_dict(i))
     return {'msg': '获取成功', "code": '200', 'fall_list': res}
 
-
 def getIntrusionEvent(request):
     intrusionList = cache.get('intrusion_list')
     if not intrusionList:
@@ -89,6 +87,34 @@ def getIntrusionEvent(request):
     for i in intrusionList:
         res.append(model_to_dict(i))
     return {'msg': '获取成功', "code": '200', 'intrusion_list': res}
+
+# 获取火焰检测事件
+def getFireEvent(request):
+    fireList = cache.get('fire_list')
+    if not fireList:
+        try:
+            fireList = models.event_info.objects.filter(event_type="火焰")
+            cache.set('fire_list', fireList, 10)
+        except:
+            return {'msg': '不存在本信息', "code": '204'}
+    res = []
+    for i in fireList:
+        res.append(model_to_dict(i))
+    return {'msg': '获取成功', "code": '200', 'fire_list': res}
+
+# 获取暴力检测事件
+def getViolenceEvent(request):
+    violenceList = cache.get('violence_list')
+    if not violenceList:
+        try:
+            violenceList = models.event_info.objects.filter(event_type="暴力")
+            cache.set('violence_list', violenceList, 10)
+        except:
+            return {'msg': '不存在本信息', "code": '204'}
+    res = []
+    for i in violenceList:
+        res.append(model_to_dict(i))
+    return {'msg': '获取成功', "code": '200', 'violence_list': res}
 
 def getEventInfo(request):
     try:
