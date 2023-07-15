@@ -55,8 +55,8 @@ class myThread(threading.Thread):
         self.img_width = 600
         self.frame = np.zeros((img_height, img_width, 3), dtype=np.uint8)
 
-    # def stop(self):
-    #     self.isRunning = False
+    def stop(self):
+        thread_exit = False
     #
     # def __del__(self):
     #     self.out.release()

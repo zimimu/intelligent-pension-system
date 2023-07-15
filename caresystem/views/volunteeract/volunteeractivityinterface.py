@@ -2,6 +2,7 @@
 from caresystem.views.oldcare.facial import FaceUtil
 from scipy.spatial import distance as dist
 from caresystem.views.oldcare.utils import fileassistant
+from caresystem.views.dataManage import addEvent
 from PIL import Image, ImageDraw, ImageFont
 import cv2
 import time
@@ -130,6 +131,7 @@ def volunteeractivity(grabbed, frame):
                     if (insert == 0):
                         # 插入数据库
                         print("交互")
+                        addEvent(id,'互动','房间')
                         insert = 1
             else:
                 insert = 0

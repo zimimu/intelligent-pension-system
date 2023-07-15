@@ -6,6 +6,7 @@ from caresystem.views.oldcare.utils import fileassistant
 from keras.models import load_model
 from keras.preprocessing.image import image_utils
 from caresystem.views import dataManage
+from caresystem.views.dataManage import addEvent
 import cv2
 import time
 import numpy as np
@@ -107,6 +108,7 @@ def checkingstrangersandfacialexpression(grabbed, frame):
                     if insert == 0:
                         #插入数据库
                         print("陌生人出现！")
+                        addEvent('Unknown', '入侵', '房间')
                         insert = 1
 
         else:  # everything is ok
@@ -146,6 +148,7 @@ def checkingstrangersandfacialexpression(grabbed, frame):
                     if (insert == 0):
                         #插入数据库
                         print("老人笑了")
+                        addEvent(id, '情绪', '房间')
                         insert = 1
 
             else:  # everything is ok

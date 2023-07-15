@@ -1,6 +1,7 @@
 # 导入包
 from caresystem.views.oldcare.track import CentroidTracker
 from caresystem.views.oldcare.track import TrackableObject
+from caresystem.views.dataManage import addEvent
 from imutils.video import FPS
 import numpy as np
 import imutils
@@ -129,6 +130,7 @@ def checkingfence(frame):
             # set the status of our system to be 'tracking' rather
             # than 'waiting' or 'detecting'
             status = "Tracking"
+            addEvent('Unknown', '入侵', '院子')
 
             # update the tracker and grab the updated position
             tracker.update(rgb)

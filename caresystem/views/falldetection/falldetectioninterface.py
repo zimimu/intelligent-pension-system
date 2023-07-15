@@ -5,6 +5,7 @@ import time
 import cv2
 import caresystem.views.falldetection.PoseModule as pm
 import math
+from caresystem.views.dataManage import addEvent
 
 # 全局变量
 detector = pm.poseDetector()
@@ -62,6 +63,7 @@ def falldetection(success, img):
                     if insert == 0:
                         # 插入数据库
                         print("跌倒")
+                        addEvent('Unknown', '跌倒', '院子')
                         insert = 1
         else:
             bs = 0

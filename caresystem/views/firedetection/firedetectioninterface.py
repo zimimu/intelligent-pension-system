@@ -6,6 +6,7 @@ import subprocess
 import argparse
 from keras.preprocessing.image import image_utils
 from keras.models import load_model
+from caresystem.views.dataManage import addEvent
 
 
 def fire_detection(frame):
@@ -38,6 +39,7 @@ def fire_detection(frame):
         event_desc = '有火灾发生!!!'
         event_location = '房间'
         print('[EVENT] %s, 房间, 有火灾发生!!!' % current_time)
+        addEvent('Unknown', '火灾', '房间')
         cv2.imwrite(os.path.join(output_fall_path, 'snapshot_%s.jpg' % (time.strftime('%Y%m%d_%H%M%S'))), frame)
 
     return frame
