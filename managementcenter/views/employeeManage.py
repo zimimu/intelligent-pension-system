@@ -42,6 +42,7 @@ def addEmployInfo(request):
     except:
         return {'msg': '服务器错误，请重试', "code": '500'}
 
+    globeFunction.write_info_to_csv("",face.ID,json_data["employeename"],"employee")
     return {'msg': '添加成功', "code": '200',"id": face.ID}
 
 def updateEmployInfo(request):

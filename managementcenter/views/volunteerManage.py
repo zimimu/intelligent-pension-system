@@ -41,6 +41,7 @@ def addVolunteerInfo(request):
         face.save()
     except:
         return {'msg': '服务器错误，请重试', "code": '500'}
+    globeFunction.write_info_to_csv("", face.ID, json_data["volunteername"], "volunteer")
     return {'msg': '添加成功', "code": '200', "id": face.ID}
 
 def updateVolunteerInfo(request):

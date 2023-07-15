@@ -1,4 +1,6 @@
 from django.utils import timezone
+import pandas
+import csv
 import pytz
 import json
 import datetime
@@ -19,3 +21,9 @@ def change_type(byte):
     if isinstance(byte,bytes):
         return str(byte,encoding="utf-8")
     return json.JSONEncoder.default(byte)
+
+def write_info_to_csv(path, id, name, type):
+    with open(path, 'a+', encoding='utf8', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow([id, name, type])
+

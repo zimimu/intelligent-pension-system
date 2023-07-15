@@ -3,6 +3,7 @@ from django.urls import path
 from managementcenter.views import views as manage_views
 
 urlpatterns = [
+    path('test/',manage_views.test),
     path('addOld/', manage_views.addOldInfo),
     path('updateOld/', manage_views.updateOldInfo),
     path('checkoutOld/', manage_views.checkoutOld),

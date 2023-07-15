@@ -67,7 +67,7 @@ def getFallEvent(request):
     fallList = cache.get('fall_list')
     if not fallList:
         try:
-            fallList = models.event_info.objects.filter(event_type="互动")
+            fallList = models.event_info.objects.filter(event_type="摔倒")
             cache.set('fall_list', fallList, 10)
         except:
             return {'msg': '不存在本信息', "code": '204'}
@@ -81,7 +81,7 @@ def getIntrusionEvent(request):
     intrusionList = cache.get('intrusion_list')
     if not intrusionList:
         try:
-            intrusionList = models.event_info.objects.filter(event_type="互动")
+            intrusionList = models.event_info.objects.filter(event_type="入侵")
             cache.set('intrusion_list', intrusionList, 10)
         except:
             return {'msg': '不存在本信息', "code": '204'}

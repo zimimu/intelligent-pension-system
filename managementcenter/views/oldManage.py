@@ -2,6 +2,7 @@
 import datetime
 import json
 
+from managementcenter.views import globeFunction
 from dateutil.relativedelta import relativedelta
 from django.forms import model_to_dict
 from django.utils import timezone
@@ -64,7 +65,7 @@ def addOldInfo(request):
         face.save()
     except:
         return {'msg': '服务器错误，请重试', "code": '500'}
-
+    globeFunction.write_info_to_csv("", face.ID, json_data["oldname"], "old_people")
     return {'msg': '添加成功', "code": '200', "id": face.ID}
 
 
